@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_loginFragment"
-            app:destination="@id/registerFragment"
+            app:destination="@id/loginFragment"
             app:enterAnim="@android:anim/fade_in"
             app:exitAnim="@android:anim/fade_out" />
     </fragment>
@@ -20,7 +20,14 @@
         android:id="@+id/loginFragment"
         android:name="com.serapercel.saglikliyasam.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.serapercel.saglikliyasam.HomeFragment"
