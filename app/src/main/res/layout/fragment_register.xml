@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/ic_launcher_background"
-    tools:context=".LoginFragment">
+    tools:context=".RegisterFragment">
 
     <ImageView
         android:id="@+id/logoImageView"
@@ -20,22 +19,38 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="@string/e_mail"
+        android:hint="@string/nick_name"
+        android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:paddingHorizontal="20dp"
         android:paddingVertical="17dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoImageView"
-        tools:ignore="TextContrastCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/e_mail"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/editTextNumberPassword"
@@ -45,57 +60,27 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/sifre"
+        android:importantForAutofill="no"
         android:inputType="numberPassword"
         android:paddingHorizontal="20dp"
         android:paddingVertical="17dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
-        tools:ignore="TextContrastCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/night_primary"
-        android:paddingVertical="10dp"
-        android:text="@string/giris_yap"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword" />
-
-    <Button
-        android:id="@+id/signUpButton"
+        android:id="@+id/signInButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/night_accent"
         android:paddingVertical="10dp"
-        android:text="@string/kayit_ol"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/sign_in"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword" />
 
-    <Button
-        android:id="@+id/forgotPasswordButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:backgroundTint="@color/night_secondary_text"
-        android:text="@string/sifremi_unuttum"
-        android:textColor="@color/primary_text"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpButton"
-        tools:ignore="TextContrastCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

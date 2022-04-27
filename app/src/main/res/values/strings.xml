@@ -2,4 +2,9 @@
     <string name="app_name">SaglikliYasam</string>
     <string name="appTitle">SAĞLIKLI YAŞAM</string>
     <string name="logo">logo</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="sifre">Şifre</string>
+    <string name="giris_yap">Giriş Yap</string>
+    <string name="kayit_ol">Kayıt Ol</string>
+    <string name="sifremi_unuttum">Şifremi Unuttum</string>
 </resources>
