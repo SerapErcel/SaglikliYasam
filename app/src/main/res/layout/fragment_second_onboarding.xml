@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ic_launcher_background"
+    android:backgroundTint="@color/ic_launcher_background"
+    tools:context=".onboarding.screens.SecondOnboardingFragment">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="189dp"
+        android:layout_height="501dp"
+        android:contentDescription="@string/design"
+        android:src="@drawable/onboarding2_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="125dp"
+        android:layout_height="245dp"
+        android:contentDescription="@string/design"
+        android:src="@drawable/butterfly_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/description2"
+        android:layout_width="230dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="252dp"
+        android:text="@string/onboarding_text2"
+        android:textAlignment="center"
+        android:textColor="@color/night_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/description3"
+        android:layout_width="247dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="136dp"
+        android:text="@string/onboarding_text3"
+        android:textAlignment="center"
+        android:textColor="@color/night_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description2" />
+
+    <Button
+        android:id="@+id/ContinueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/night_primary"
+        android:text="@string/go_on"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="91dp"
+        android:layout_height="113dp"
+        android:src="@drawable/onboarding2_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/design" />
+</androidx.constraintlayout.widget.ConstraintLayout>
