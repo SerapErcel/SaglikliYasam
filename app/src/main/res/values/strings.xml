@@ -7,4 +7,25 @@
     <string name="giris_yap">Giriş Yap</string>
     <string name="kayit_ol">Kayıt Ol</string>
     <string name="sifremi_unuttum">Şifremi Unuttum</string>
+    <string name="cover">cover</string>
+    <string name="title_place_holder">Title Place Holder</string>
+    <string name="time_place_holder">Time Place Holder</string>
+    <string name="height">Boy (cm)</string>
+    <string name="weight">Kilo (kg)</string>
+    <string name="caluculate">Hesapla</string>
+    <string name="design">design</string>
+    <string name="onborading_text1">Su İçme, Duruş Düzeltme, Öğün Saati ve İlaç Saati Bildirimleriyle Organize Olun</string>
+    <string name="go_on">Devam</string>
+    <string name="buton">buton</string>
+    <string name="necessaries">1 Adet Malzeme, 2 Adet Malzeme, 1 Adet Malzeme, 2 Adet Malzeme, 1 Adet Malzeme</string>
+    <string name="description">Lorem ipsum dolor sit amet.</string>
+    <string name="nick_name">Kullanıcı Adı</string>
+    <string name="sign_up">Kayıt Ol</string>
+    <string name="onboarding_text2">Vücut Kitle İndeksi Ölçümü Yapın</string>
+    <string name="onboarding_text3">Motivasyon Mesajları Alın</string>
+    <string name="onboarding_text4">Egzersizlere Ve Sağlıklı Tariflere Kolayca Ulaşın</string>
+    <string name="finished">Bitir</string>
+
+
+    @string/title_place_holder
 </resources>

@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam
+package com.serapercel.saglikliyasam.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.serapercel.saglikliyasam.databinding.FragmentRecipeDetailBinding
+import com.serapercel.saglikliyasam.model.Recipe
+import com.serapercel.saglikliyasam.model.recipeList
 import androidx.navigation.fragment.navArgs as navArgs
 
 class RecipeDetailFragment : Fragment() {

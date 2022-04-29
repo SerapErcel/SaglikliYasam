@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam.onboarding.screens
+package com.serapercel.saglikliyasam.view.onboarding.screens
 
 import android.content.Context
 import android.os.Bundle

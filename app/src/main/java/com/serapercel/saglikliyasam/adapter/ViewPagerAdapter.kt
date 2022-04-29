@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam.onboarding
+package com.serapercel.saglikliyasam.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

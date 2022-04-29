@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam
+package com.serapercel.saglikliyasam.model
 
 var recipeList = mutableListOf<Recipe>()
 

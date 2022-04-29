@@ -1,15 +1,15 @@
-package com.serapercel.saglikliyasam.onboarding
+package com.serapercel.saglikliyasam.view.onboarding
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.FragmentViewPagerBinding
-import com.serapercel.saglikliyasam.onboarding.screens.FirstOnboardingFragment
-import com.serapercel.saglikliyasam.onboarding.screens.SecondOnboardingFragment
-import com.serapercel.saglikliyasam.onboarding.screens.ThirdOnboardingFragment
+import com.serapercel.saglikliyasam.adapter.ViewPagerAdapter
+import com.serapercel.saglikliyasam.view.onboarding.screens.FirstOnboardingFragment
+import com.serapercel.saglikliyasam.view.onboarding.screens.SecondOnboardingFragment
+import com.serapercel.saglikliyasam.view.onboarding.screens.ThirdOnboardingFragment
 
 class ViewPagerFragment : Fragment() {
 

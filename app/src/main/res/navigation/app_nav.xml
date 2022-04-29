@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.serapercel.saglikliyasam.SplashFragment"
+        android:name="com.serapercel.saglikliyasam.view.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.serapercel.saglikliyasam.LoginFragment"
+        android:name="com.serapercel.saglikliyasam.view.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.serapercel.saglikliyasam.HomeFragment"
+        android:name="com.serapercel.saglikliyasam.view.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.serapercel.saglikliyasam.RegisterFragment"
+        android:name="com.serapercel.saglikliyasam.view.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="com.serapercel.saglikliyasam.onboarding.ViewPagerFragment"
+        android:name="com.serapercel.saglikliyasam.view.onboarding.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" >
         <action
@@ -68,12 +68,12 @@
     </fragment>
     <fragment
         android:id="@+id/bmiCalculateFragment"
-        android:name="com.serapercel.saglikliyasam.BmiCalculateFragment"
+        android:name="com.serapercel.saglikliyasam.view.BmiCalculateFragment"
         android:label="fragment_bmi_calculate"
         tools:layout="@layout/fragment_bmi_calculate" />
     <fragment
         android:id="@+id/recipesFragment"
-        android:name="com.serapercel.saglikliyasam.RecipesFragment"
+        android:name="com.serapercel.saglikliyasam.view.RecipesFragment"
         android:label="fragment_recipes"
         tools:layout="@layout/fragment_recipes" >
         <action
@@ -82,7 +82,7 @@
     </fragment>
     <fragment
         android:id="@+id/recipeDetailFragment"
-        android:name="com.serapercel.saglikliyasam.RecipeDetailFragment"
+        android:name="com.serapercel.saglikliyasam.view.RecipeDetailFragment"
         android:label="fragment_recipe_detail"
         tools:layout="@layout/fragment_recipe_detail" >
         <argument

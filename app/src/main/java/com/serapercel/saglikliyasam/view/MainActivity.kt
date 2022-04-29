@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam
+package com.serapercel.saglikliyasam.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

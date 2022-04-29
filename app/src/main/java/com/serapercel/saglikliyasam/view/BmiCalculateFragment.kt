@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam
+package com.serapercel.saglikliyasam.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
