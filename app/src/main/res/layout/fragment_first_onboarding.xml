@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/ic_launcher_background"
     android:backgroundTint="@color/night_secondary_text"
-    tools:context=".view.onboarding.screens.FirstOnboardingFragment">
-
+    tools:context=".presentation.ui.onboarding.screens.FirstOnboardingFragment">
 
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginTop="140dp"
+        android:elevation="3dp"
         app:layout_constraintBottom_toTopOf="@+id/description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -53,6 +53,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/night_primary"
         android:text="@string/go_on"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

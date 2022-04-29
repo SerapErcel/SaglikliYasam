@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SaglikliYasam</string>
+    <string name="app_name">Saglikli Yasam</string>
     <string name="appTitle">SAĞLIKLI YAŞAM</string>
     <string name="logo">logo</string>
     <string name="e_mail">E-Mail</string>
@@ -25,7 +25,11 @@
     <string name="onboarding_text3">Motivasyon Mesajları Alın</string>
     <string name="onboarding_text4">Egzersizlere Ve Sağlıklı Tariflere Kolayca Ulaşın</string>
     <string name="finished">Bitir</string>
-
-
-    @string/title_place_holder
+    <string name="enter_your_info">Bilgilerinizi Giriniz!</string>
+    <string name="enter_your_email">E Mail Adresinizi Giriniz!</string>
+    <string name="link_sent">Yeni parola için gerekli bağlantı adresinize gönderildi!</string>
+    <string name="email_sending_error">Mail gönderme hatası!</string>
+    
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

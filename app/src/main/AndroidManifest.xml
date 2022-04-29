@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SaglikliYasam">
         <activity
-            android:name=".view.MainActivity"
+            android:name=".presentation.ui.activity.FlowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.activity.MainActivity"
+            android:theme="@style/Theme.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

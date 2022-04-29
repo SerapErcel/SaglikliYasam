@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/exerciseCardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        app:cardElevation="7dp"
+        app:cardBackgroundColor="@color/night_secondary_text"
+        android:focusable="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/exerciseCover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/exercise"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/cover"/>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="2"
+                android:text="@string/title_place_holder"
+                android:textColor="@color/night_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/time_place_holder"
+                android:textColor="@color/night_primary_dark"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

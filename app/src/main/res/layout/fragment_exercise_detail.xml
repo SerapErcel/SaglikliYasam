@@ -3,24 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".presentation.ui.fragment.exercise_detail.ExerciseDetailFragment"
     android:orientation="vertical"
-    tools:context=".presentation.ui.fragment.recipe_detail.RecipeDetailFragment">
-
+    android:background="@color/night_secondary_text">
     <ImageView
-        android:id="@+id/cover"
+        android:id="@+id/exerciseCover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:src="@drawable/exercise"
         android:adjustViewBounds="true"
-        android:contentDescription="@string/cover"
-        android:src="@drawable/patlican_pizza" />
-
+        android:layout_gravity="center"
+        android:contentDescription="@string/cover"/>
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/exerciseTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
         android:gravity="center"
         android:lines="2"
         android:text="@string/title_place_holder"
@@ -29,30 +26,18 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/time"
+        android:id="@+id/exerciseTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
         android:gravity="center"
         android:lines="1"
         android:text="@string/time_place_holder"
         android:textColor="@color/night_primary_dark"
         android:textSize="16sp" />
-
     <TextView
-        android:id="@+id/necessaries"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="@string/necessaries"
-        android:textColor="@color/night_primary_dark"
-        android:textSize="14sp" />
-
-    <TextView
-        android:id="@+id/description"
+        android:id="@+id/exerciseDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
@@ -61,5 +46,6 @@
         android:text="@string/description"
         android:textColor="@color/night_primary_dark"
         android:textSize="14sp" />
+
 
 </LinearLayout>
