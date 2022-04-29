@@ -14,7 +14,6 @@ import com.serapercel.saglikliyasam.databinding.FragmentRecipesBinding
 import com.serapercel.saglikliyasam.model.Recipe
 import com.serapercel.saglikliyasam.model.recipeList
 
-
 class RecipesFragment : Fragment(), RecipeClickListener {
 
     private var _binding: FragmentRecipesBinding? = null

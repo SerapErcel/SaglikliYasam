@@ -29,7 +29,5 @@
     <string name="enter_your_email">E Mail Adresinizi Giriniz!</string>
     <string name="link_sent">Yeni parola için gerekli bağlantı adresinize gönderildi!</string>
     <string name="email_sending_error">Mail gönderme hatası!</string>
-    
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
