@@ -39,7 +39,11 @@
         android:id="@+id/homeFragment"
         android:name="com.serapercel.saglikliyasam.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_recipesFragment"
+            app:destination="@id/recipesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.serapercel.saglikliyasam.RegisterFragment"
@@ -67,4 +71,22 @@
         android:name="com.serapercel.saglikliyasam.BmiCalculateFragment"
         android:label="fragment_bmi_calculate"
         tools:layout="@layout/fragment_bmi_calculate" />
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.serapercel.saglikliyasam.RecipesFragment"
+        android:label="fragment_recipes"
+        tools:layout="@layout/fragment_recipes" >
+        <action
+            android:id="@+id/action_recipesFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.serapercel.saglikliyasam.RecipeDetailFragment"
+        android:label="fragment_recipe_detail"
+        tools:layout="@layout/fragment_recipe_detail" >
+        <argument
+            android:name="recipe_ID_extra"
+            app:argType="integer" />
+    </fragment>
 </navigation>
