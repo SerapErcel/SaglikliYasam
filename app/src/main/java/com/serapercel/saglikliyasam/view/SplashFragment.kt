@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam
+package com.serapercel.saglikliyasam.view
 
 import android.content.Context
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment() {

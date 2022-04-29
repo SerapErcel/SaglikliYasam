@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BmiCalculateFragment"
+    tools:context=".view.BmiCalculateFragment"
     android:background="@color/primary_light">
 
 
@@ -60,7 +60,7 @@
         android:backgroundTint="@color/night_primary_light"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
-        android:text="@string/calculate"
+        android:text="@string/caluculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextWeight"

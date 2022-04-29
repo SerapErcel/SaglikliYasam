@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam
+package com.serapercel.saglikliyasam.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
+import com.serapercel.saglikliyasam.adapter.CardAdapter
+import com.serapercel.saglikliyasam.R
+import com.serapercel.saglikliyasam.service.RecipeClickListener
 import com.serapercel.saglikliyasam.databinding.FragmentRecipesBinding
+import com.serapercel.saglikliyasam.model.Recipe
+import com.serapercel.saglikliyasam.model.recipeList
 
 
 class RecipesFragment : Fragment(), RecipeClickListener {
