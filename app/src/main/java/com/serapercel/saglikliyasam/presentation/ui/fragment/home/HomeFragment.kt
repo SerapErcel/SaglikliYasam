@@ -31,6 +31,9 @@ class HomeFragment : Fragment() {
         binding.button.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_recipesFragment)
         }
+        binding.button2.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_exercisesFragment)
+        }
     }
 
     override fun onDestroyView() {

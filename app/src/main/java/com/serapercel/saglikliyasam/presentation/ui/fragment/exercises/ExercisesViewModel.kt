@@ -7,7 +7,7 @@ import com.serapercel.saglikliyasam.model.exerciseList
 
 class ExercisesViewModel : ViewModel() {
     // todo "change mock data with real data"
-    private fun populateExercises() {
+    fun populateExercises() {
         val exercise1 = Exercise(
             R.drawable.patlican_pizza,
             name = "Isınma Egzersizi",

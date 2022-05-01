@@ -46,6 +46,9 @@
         <action
             android:id="@+id/action_homeFragment_to_exercisesFragment"
             app:destination="@id/exercisesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_exercisesFragment2"
+            app:destination="@id/exercisesFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -94,7 +97,7 @@
     </fragment>
     <fragment
         android:id="@+id/exercisesFragment"
-        android:name="com.serapercel.saglikliyasam.ExercisesFragment"
+        android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.exercises.ExercisesFragment"
         android:label="fragment_exercises"
         tools:layout="@layout/fragment_exercises" >
         <action
@@ -105,5 +108,10 @@
         android:id="@+id/exerciseDetailFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.exercise_detail.ExerciseDetailFragment"
         android:label="fragment_exercise_detail"
-        tools:layout="@layout/fragment_exercise_detail" />
+        tools:layout="@layout/fragment_exercise_detail" >
+        <argument
+            android:name="exerciseID"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
 </navigation>
