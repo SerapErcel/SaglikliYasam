@@ -13,5 +13,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="SplashFragmentTheme" parent="Theme.AppCompat.Light.NoActionBar"/>
+
+    <style name="Theme.MainActivity" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
 </resources>
