@@ -29,5 +29,8 @@
     <string name="enter_your_email">E Mail Adresinizi Giriniz!</string>
     <string name="link_sent">Yeni parola için gerekli bağlantı adresinize gönderildi!</string>
     <string name="email_sending_error">Mail gönderme hatası!</string>
+    <string name="menu_recipes">Sağlıklı Tarifler</string>
+    <string name="menu_exercises">Egzersizler</string>
+    <string name="menu_bmi">Vücut Kitle İndeksi Hesapla</string>
 
 </resources>

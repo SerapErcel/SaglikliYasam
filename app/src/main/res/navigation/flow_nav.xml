@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/flow_nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flow_nav"
+    app:startDestination="@id/homeFragment">
 
+    <fragment
+        android:id="@+id/bmiCalculateFragment"
+        android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.bmi_calculate.BmiCalculateFragment"
+        android:label="fragment_bmi_calculate"
+        tools:layout="@layout/fragment_bmi_calculate" />
+    <fragment
+        android:id="@+id/exerciseDetailFragment"
+        android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.exercise_detail.ExerciseDetailFragment"
+        android:label="fragment_exercise_detail"
+        tools:layout="@layout/fragment_exercise_detail" >
+        <argument
+            android:name="exerciseID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/exercisesFragment"
+        android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.exercises.ExercisesFragment"
+        android:label="fragment_exercises"
+        tools:layout="@layout/fragment_exercises" >
+        <action
+            android:id="@+id/action_exercisesFragment_to_exerciseDetailFragment"
+            app:destination="@id/exerciseDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.recipes.RecipesFragment"
+        android:label="fragment_recipes"
+        tools:layout="@layout/fragment_recipes" >
+        <action
+            android:id="@+id/action_recipesFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.recipe_detail.RecipeDetailFragment"
+        android:label="fragment_recipe_detail"
+        tools:layout="@layout/fragment_recipe_detail" >
+        <argument
+            android:name="recipeID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_exercisesFragment"
+            app:destination="@id/exercisesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bmiCalculateFragment"
+            app:destination="@id/bmiCalculateFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_recipesFragment"
+            app:destination="@id/recipesFragment" />
+    </fragment>
 </navigation>

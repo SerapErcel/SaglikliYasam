@@ -23,7 +23,7 @@ class RecipeDetailFragment : Fragment() {
     ): View {
         _binding = FragmentRecipeDetailBinding.inflate(inflater, container, false)
         val view = binding.root
-        val recipeID = args.recipeIDExtra
+        val recipeID = args.recipeID
         val recipe = recipeFromID(recipeID)
         if (recipe != null) {
             binding.apply {
@@ -43,7 +43,7 @@ class RecipeDetailFragment : Fragment() {
     }
 
     private fun initUi() {
-        val recipeID = args.recipeIDExtra
+        val recipeID = args.recipeID
         val recipe = recipeFromID(recipeID)
         if (recipe != null) {
             binding.apply {
@@ -55,6 +55,7 @@ class RecipeDetailFragment : Fragment() {
             }
         }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

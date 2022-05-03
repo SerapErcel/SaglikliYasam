@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.serapercel.saglikliyasam.R
@@ -40,9 +39,9 @@ class ExercisesFragment : Fragment(), ExerciseClickListener {
         }
     }
 
-    override fun onClick(exercsie: Exercise) {
+    override fun onClick(exercise: Exercise) {
         val action = ExercisesFragmentDirections.actionExercisesFragmentToExerciseDetailFragment(
-            exercsie.id!!
+            exercise.id!!
         )
         findNavController().navigate(action)
     }
