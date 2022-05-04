@@ -61,4 +61,9 @@
             android:id="@+id/action_homeFragment_to_recipesFragment"
             app:destination="@id/recipesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/medicinesFragment"
+        android:name="com.serapercel.saglikliyasam.MedicinesFragment"
+        android:label="fragment_medicines"
+        tools:layout="@layout/fragment_medicines" />
 </navigation>

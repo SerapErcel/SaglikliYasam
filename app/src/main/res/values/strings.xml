@@ -32,5 +32,7 @@
     <string name="menu_recipes">Sağlıklı Tarifler</string>
     <string name="menu_exercises">Egzersizler</string>
     <string name="menu_bmi">Vücut Kitle İndeksi Hesapla</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
