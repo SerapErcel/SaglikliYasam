@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MedicinesFragment"
+    tools:context=".presentation.ui.fragment.medicines.MedicinesFragment"
     android:background="@color/primary_light">
 
 
