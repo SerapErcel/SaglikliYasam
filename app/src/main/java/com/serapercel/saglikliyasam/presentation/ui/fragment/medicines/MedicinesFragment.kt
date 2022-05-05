@@ -30,6 +30,9 @@ class MedicinesFragment : Fragment() {
         binding.medicinesRecyclerView.layoutManager = LinearLayoutManager(context)
         val medicineAdapter = MedicineAdapter()
         binding.medicinesRecyclerView.adapter = medicineAdapter
+        binding.floatingActionButton.setOnClickListener {
+
+        }
     }
 
     override fun onDestroyView() {
