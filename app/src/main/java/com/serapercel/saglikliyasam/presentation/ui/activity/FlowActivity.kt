@@ -20,8 +20,6 @@ class FlowActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration: AppBarConfiguration
 
-    private lateinit var listener: NavController.OnDestinationChangedListener
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFlowBinding.inflate(layoutInflater)
@@ -33,14 +31,13 @@ class FlowActivity : AppCompatActivity() {
         drawerLayout = findViewById(R.id.drawerLayout)
         binding.navigationView.setupWithNavController(navController)
 
-        appBarConfiguration= AppBarConfiguration(navController.graph,drawerLayout)
-        setupActionBarWithNavController(navController,appBarConfiguration)
-
+        appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
+        setupActionBarWithNavController(navController, appBarConfiguration)
 
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController= findNavController(R.id.fragmentContainer)
+        val navController = findNavController(R.id.fragmentContainer)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 

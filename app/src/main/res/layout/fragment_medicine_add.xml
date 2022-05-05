@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.fragment.bmi_calculate.BmiCalculateFragment"
+    tools:context=".MedicineAddFragment"
     android:background="@color/primary_light">
 
-
     <EditText
-        android:id="@+id/editTextHeight"
+        android:id="@+id/editTextMedicine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -17,12 +17,13 @@
         android:background="@color/primary"
         android:backgroundTint="@color/primary"
         android:ems="10"
-        android:hint="@string/height"
+        android:hint="@string/medicine_name"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         android:minHeight="48dp"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
+
         android:textColor="@color/night_primary_dark"
         android:textColorHint="@color/primary_dark"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +32,7 @@
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/editTextWeight"
+        android:id="@+id/editTextTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -39,17 +40,18 @@
         android:background="@color/primary"
         android:backgroundTint="@color/primary"
         android:ems="10"
-        android:hint="@string/weight"
+        android:hint="@string/medicine_time"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal"
+        android:inputType="time"
         android:minHeight="48dp"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
+
         android:textColor="@color/night_primary_dark"
         android:textColorHint="@color/primary_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextHeight"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMedicine"
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <Button
@@ -58,13 +60,17 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="28dp"
-        android:minHeight="50dp"
         android:backgroundTint="@color/night_primary_light"
+        android:minHeight="50dp"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
-        android:text="@string/caluculate"
+        android:text="@string/add_medicine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextWeight"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime"
         tools:ignore="TextContrastCheck" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
