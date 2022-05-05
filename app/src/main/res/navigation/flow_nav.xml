@@ -60,10 +60,13 @@
         <action
             android:id="@+id/action_homeFragment_to_recipesFragment"
             app:destination="@id/recipesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_medicinesFragment"
+            app:destination="@id/medicinesFragment" />
     </fragment>
     <fragment
         android:id="@+id/medicinesFragment"
-        android:name="com.serapercel.saglikliyasam.MedicinesFragment"
+        android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.medicines.MedicinesFragment"
         android:label="fragment_medicines"
         tools:layout="@layout/fragment_medicines" />
 </navigation>
