@@ -19,7 +19,7 @@
         android:ems="10"
         android:hint="@string/medicine_name"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         android:minHeight="48dp"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
