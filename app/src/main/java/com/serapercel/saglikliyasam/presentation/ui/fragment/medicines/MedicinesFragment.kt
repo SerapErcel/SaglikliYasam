@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.FragmentMedicinesBinding
 import com.serapercel.saglikliyasam.model.Medicine
 import com.serapercel.saglikliyasam.model.medicineList
@@ -31,7 +33,7 @@ class MedicinesFragment : Fragment() {
         val medicineAdapter = MedicineAdapter()
         binding.medicinesRecyclerView.adapter = medicineAdapter
         binding.floatingActionButton.setOnClickListener {
-
+            findNavController().navigate(R.id.action_medicinesFragment_to_medicineAddFragment)
         }
     }
 

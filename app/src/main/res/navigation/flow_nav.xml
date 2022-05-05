@@ -68,5 +68,14 @@
         android:id="@+id/medicinesFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.medicines.MedicinesFragment"
         android:label="fragment_medicines"
-        tools:layout="@layout/fragment_medicines" />
+        tools:layout="@layout/fragment_medicines" >
+        <action
+            android:id="@+id/action_medicinesFragment_to_medicineAddFragment"
+            app:destination="@id/medicineAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineAddFragment"
+        android:name="com.serapercel.saglikliyasam.MedicineAddFragment"
+        android:label="fragment_medicine_add"
+        tools:layout="@layout/fragment_medicine_add" />
 </navigation>
