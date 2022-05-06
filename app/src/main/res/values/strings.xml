@@ -39,5 +39,6 @@
     <string name="medicine_name">İlaç ismi</string>
     <string name="add_medicine">İlaç Saati Ekle</string>
     <string name="medicine_time">İlaç Saati</string>
+    <string name="meals_time">Öğün Saatleri</string>
 
 </resources>
