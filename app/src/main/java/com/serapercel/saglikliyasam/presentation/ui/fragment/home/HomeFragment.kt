@@ -34,6 +34,24 @@ class HomeFragment : Fragment() ,ExerciseClickListener{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
+        binding.drinkWaterButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_waterDrinkingFragment)
+        }
+        binding.drinkWaterTextButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_waterDrinkingFragment)
+        }
+        binding.medicinesButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_medicinesFragment)
+        }
+        binding.medicinesTextButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_medicinesFragment)
+        }
+        binding.mealButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_mealsFragment)
+        }
+        binding.mealTextButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_mealsFragment)
+        }
     }
 
     private fun initView() {

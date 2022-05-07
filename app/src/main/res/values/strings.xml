@@ -49,5 +49,9 @@
     <string name="amount">0</string>
     <string name="water_drinking">Su İçme</string>
     <string name="title1">EGZERSİZLER</string>
+    <string name="title2">KONTROLLER</string>
+    <string name="meals">Öğünler</string>
+    <string name="drink_water">Su İçme</string>
+    <string name="medicines">İlaçlar</string>
 
 </resources>
