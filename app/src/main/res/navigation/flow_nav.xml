@@ -66,6 +66,9 @@
         <action
             android:id="@+id/action_homeFragment_to_mealsFragment"
             app:destination="@id/mealsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_waterDrinkingFragment"
+            app:destination="@id/waterDrinkingFragment" />
     </fragment>
     <fragment
         android:id="@+id/medicinesFragment"
@@ -95,4 +98,9 @@
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.mealAdd.AddMealFragment"
         android:label="fragment_add_meal"
         tools:layout="@layout/fragment_add_meal" />
+    <fragment
+        android:id="@+id/waterDrinkingFragment"
+        android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.waterDrinking.WaterDrinkingFragment"
+        android:label="fragment_water_drinking"
+        tools:layout="@layout/fragment_water_drinking" />
 </navigation>

@@ -43,5 +43,10 @@
     <string name="meal_name">Öğün İsmi</string>
     <string name="meal_time">Öğün Saati</string>
     <string name="add_meal">Öğün Ekle</string>
+    <string name="glass">glass</string>
+    <string name="water">water</string>
+    <string name="water_title">Tüketilen Su Miktarı</string>
+    <string name="amount">0</string>
+    <string name="water_drinking">Su İçme</string>
 
 </resources>
