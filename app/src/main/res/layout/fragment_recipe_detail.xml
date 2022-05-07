@@ -13,6 +13,7 @@
         android:layout_gravity="center"
         android:adjustViewBounds="true"
         android:contentDescription="@string/cover"
+        android:scaleType = "fitXY"
         android:src="@drawable/patlican_pizza" />
 
     <TextView

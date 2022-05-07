@@ -13,6 +13,7 @@
         android:layout_height="704dp"
         android:contentDescription="@string/design"
         android:src="@drawable/onboarding_shape3"
+        android:scaleType = "fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
