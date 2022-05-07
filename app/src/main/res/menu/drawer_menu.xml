@@ -14,5 +14,8 @@
         <item
             android:id="@+id/medicinesFragment"
             android:title="@string/medicines_time" />
+        <item
+            android:id="@+id/mealsFragment"
+            android:title="@string/meals_time" />
     </group>
 </menu>

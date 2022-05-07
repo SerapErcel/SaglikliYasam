@@ -5,11 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.fragment.medicineAdd.MedicineAddFragment"
-    android:background="@color/primary_light">
+    android:background="@color/primary_light"
+    tools:context=".presentation.ui.fragment.mealAdd.AddMealFragment">
 
     <EditText
-        android:id="@+id/editTextMedicine"
+        android:id="@+id/editTextMeal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -17,7 +17,7 @@
         android:background="@color/primary"
         android:backgroundTint="@color/primary"
         android:ems="10"
-        android:hint="@string/medicine_name"
+        android:hint="@string/meal_name"
         android:importantForAutofill="no"
         android:inputType="text"
         android:minHeight="48dp"
@@ -40,7 +40,7 @@
         android:background="@color/primary"
         android:backgroundTint="@color/primary"
         android:ems="10"
-        android:hint="@string/medicine_time"
+        android:hint="@string/meal_time"
         android:importantForAutofill="no"
         android:inputType="time"
         android:minHeight="48dp"
@@ -51,11 +51,11 @@
         android:textColorHint="@color/primary_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextMedicine"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMeal"
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <Button
-        android:id="@+id/calculateButton"
+        android:id="@+id/addButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -64,13 +64,11 @@
         android:minHeight="50dp"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
-        android:text="@string/add_medicine"
+        android:text="@string/add_meal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTime"
         tools:ignore="TextContrastCheck" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

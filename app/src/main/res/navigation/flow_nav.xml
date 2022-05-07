@@ -63,6 +63,9 @@
         <action
             android:id="@+id/action_homeFragment_to_medicinesFragment"
             app:destination="@id/medicinesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mealsFragment"
+            app:destination="@id/mealsFragment" />
     </fragment>
     <fragment
         android:id="@+id/medicinesFragment"
@@ -75,7 +78,21 @@
     </fragment>
     <fragment
         android:id="@+id/medicineAddFragment"
-        android:name="com.serapercel.saglikliyasam.MedicineAddFragment"
+        android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.medicineAdd.MedicineAddFragment"
         android:label="fragment_medicine_add"
         tools:layout="@layout/fragment_medicine_add" />
+    <fragment
+        android:id="@+id/mealsFragment"
+        android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.meals.MealsFragment"
+        android:label="fragment_meals"
+        tools:layout="@layout/fragment_meals" >
+        <action
+            android:id="@+id/action_mealsFragment_to_addMealFragment"
+            app:destination="@id/addMealFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMealFragment"
+        android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.mealAdd.AddMealFragment"
+        android:label="fragment_add_meal"
+        tools:layout="@layout/fragment_add_meal" />
 </navigation>

@@ -43,7 +43,7 @@ class MedicinesFragment : Fragment() {
     }
 
     // todo "change mock data with real data"
-    fun populateMedicine() {
+    private fun populateMedicine() {
         val medicine1 = Medicine(
             name = "Antibiotic",
             time = "20:00"
