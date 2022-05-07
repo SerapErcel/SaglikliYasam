@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.FragmentMealsBinding
@@ -33,6 +34,9 @@ class MealsFragment : Fragment() {
         binding.mealsRecyclerView.layoutManager = LinearLayoutManager(context)
         val mealAdapter = MealAdapter()
         binding.mealsRecyclerView.adapter = mealAdapter
+        binding.floatingActionButton.setOnClickListener {
+            findNavController().navigate(R.id.action_mealsFragment_to_addMealFragment)
+        }
 
     }
 
