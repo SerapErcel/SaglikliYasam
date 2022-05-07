@@ -1,15 +1,24 @@
 package com.serapercel.saglikliyasam.presentation.ui.fragment.home
 
 import android.os.Bundle
+import android.util.LayoutDirection
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.FragmentHomeBinding
+import com.serapercel.saglikliyasam.model.Exercise
+import com.serapercel.saglikliyasam.model.exerciseList
+import com.serapercel.saglikliyasam.presentation.adapter.ExerciseCardAdapter
+import com.serapercel.saglikliyasam.presentation.adapter.HomeExerciseCellAdapter
+import com.serapercel.saglikliyasam.presentation.ui.fragment.exercises.ExercisesFragmentDirections
+import com.serapercel.saglikliyasam.util.ExerciseClickListener
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment() ,ExerciseClickListener{
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -28,11 +37,12 @@ class HomeFragment : Fragment() {
     }
 
     private fun initView() {
-        binding.button.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_recipesFragment)
-        }
-        binding.button2.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_exercisesFragment)
+        populateExercises()
+
+        binding.homeExerciseRecyclerView.apply {
+            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL, false)
+            adapter =
+                HomeExerciseCellAdapter(exerciseList, this@HomeFragment)
         }
     }
 
@@ -41,5 +51,26 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
+    // todo "change mock data with real data"
+    private fun populateExercises() {
+        val exercise1 = Exercise(
+            R.drawable.exercise,
+            name = "Isınma Egzersizi",
+            time = "3 dakika",
+            description = "Isınma egzersizini verilen süre boyunca bulunduğunuz yerde tekrar tekar uygulayınız. "
+        )
+        exerciseList.add(exercise1)
+        exerciseList.add(exercise1)
+        exerciseList.add(exercise1)
+        exerciseList.add(exercise1)
+        exerciseList.add(exercise1)
+        exerciseList.add(exercise1)
+    }
+
+    override fun onClick(exercise: Exercise) {
+        val action = HomeFragmentDirections.actionHomeFragmentToExerciseDetailFragment(
+            exercise.id!!
+        )
+        findNavController().navigate(action)    }
 
 }
