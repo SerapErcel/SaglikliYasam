@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single" >
         <item
             android:id="@+id/recipesFragment"
-            android:title="@string/menu_recipes" />
+            android:title="@string/menu_recipes"
+            android:icon="@drawable/logo" />
         <item
             android:id="@+id/exercisesFragment"
-            android:title="@string/menu_exercises" />
+            android:title="@string/menu_exercises"
+            android:icon="@drawable/logo"/>
         <item
             android:id="@+id/bmiCalculateFragment"
+            android:icon="@color/accent"
             android:title="@string/menu_bmi" />
         <item
             android:id="@+id/medicinesFragment"
-            android:title="@string/medicines_time" />
+            android:title="@string/medicines_time"
+            android:icon="@drawable/logo"/>
         <item
             android:id="@+id/mealsFragment"
-            android:title="@string/meals_time" />
+            android:title="@string/meals_time"
+            android:icon="@drawable/logo"/>
         <item
             android:id="@+id/waterDrinkingFragment"
-            android:title="@string/water_drinking" />
+            android:title="@string/water_drinking"
+            android:icon="@drawable/logo"/>
     </group>
 </menu>
