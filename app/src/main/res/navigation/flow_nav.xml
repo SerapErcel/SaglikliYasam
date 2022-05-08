@@ -69,6 +69,12 @@
         <action
             android:id="@+id/action_homeFragment_to_waterDrinkingFragment"
             app:destination="@id/waterDrinkingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_exerciseDetailFragment"
+            app:destination="@id/exerciseDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/medicinesFragment"
