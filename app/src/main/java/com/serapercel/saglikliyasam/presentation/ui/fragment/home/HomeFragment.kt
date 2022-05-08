@@ -12,13 +12,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.FragmentHomeBinding
 import com.serapercel.saglikliyasam.model.Exercise
+import com.serapercel.saglikliyasam.model.Recipe
 import com.serapercel.saglikliyasam.model.exerciseList
+import com.serapercel.saglikliyasam.model.recipeList
+import com.serapercel.saglikliyasam.presentation.adapter.CardAdapter
 import com.serapercel.saglikliyasam.presentation.adapter.ExerciseCardAdapter
 import com.serapercel.saglikliyasam.presentation.adapter.HomeExerciseCellAdapter
+import com.serapercel.saglikliyasam.presentation.adapter.HomeRecipeCellAdapter
 import com.serapercel.saglikliyasam.presentation.ui.fragment.exercises.ExercisesFragmentDirections
 import com.serapercel.saglikliyasam.util.ExerciseClickListener
+import com.serapercel.saglikliyasam.util.RecipeClickListener
 
-class HomeFragment : Fragment() ,ExerciseClickListener{
+class HomeFragment : Fragment(), ExerciseClickListener, RecipeClickListener {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -56,11 +61,17 @@ class HomeFragment : Fragment() ,ExerciseClickListener{
 
     private fun initView() {
         populateExercises()
+        populateRecipes()
 
         binding.homeExerciseRecyclerView.apply {
-            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL, false)
+            layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             adapter =
                 HomeExerciseCellAdapter(exerciseList, this@HomeFragment)
+        }
+        binding.homeRecpiesRecyclerView.apply {
+            layoutManager = GridLayoutManager(context, 1)
+            adapter = HomeRecipeCellAdapter(recipeList, this@HomeFragment)
         }
     }
 
@@ -85,10 +96,36 @@ class HomeFragment : Fragment() ,ExerciseClickListener{
         exerciseList.add(exercise1)
     }
 
+    // todo "change mock data with real data"
+    private fun populateRecipes() {
+        val recipe1 = Recipe(
+            R.drawable.patlican_pizza,
+            name = "Patlıcan Pizza",
+            time = "40 dakika",
+            necessaries = "2 adet patlıcan 3 adet domates 1 yemek kaşığı salça 1 dilim sucuk 1 çay bardağı haşlanmış mısır",
+            description = "patlıcanları uzun uzun dilimle, tepsinin altına diz, üzerine salçalı sos yay, mantar domates sucuk vb. malzmeleri diz fırına at en son üzerine kaşar peyniri rendele ve afiyet olsun."
+        )
+        recipeList.add(recipe1)
+        recipeList.add(recipe1)
+        recipeList.add(recipe1)
+        recipeList.add(recipe1)
+        recipeList.add(recipe1)
+        recipeList.add(recipe1)
+
+    }
+
     override fun onClick(exercise: Exercise) {
         val action = HomeFragmentDirections.actionHomeFragmentToExerciseDetailFragment(
             exercise.id!!
         )
-        findNavController().navigate(action)    }
+        findNavController().navigate(action)
+    }
+
+    override fun onClick(recipe: Recipe) {
+        val action = HomeFragmentDirections.actionHomeFragmentToRecipeDetailFragment(
+            recipe.id!!
+        )
+        findNavController().navigate(action)
+    }
 
 }
