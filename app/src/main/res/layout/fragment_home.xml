@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/title2"
         android:textColor="@color/night_primary"
         android:textStyle="bold"
@@ -48,7 +48,7 @@
         android:id="@+id/homeExerciseRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +59,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@color/primary_light"
         android:contentDescription="@string/cover"
         android:scaleType="fitCenter"
@@ -72,7 +72,7 @@
         android:id="@+id/drinkWaterButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@color/primary_light"
         android:contentDescription="@string/cover"
         android:scaleType="fitCenter"
@@ -85,7 +85,7 @@
         android:id="@+id/medicinesButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:background="@color/primary_light"
         android:contentDescription="@string/cover"
@@ -100,25 +100,25 @@
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:backgroundTint="@color/accent"
         android:text="@string/meals"
         android:textSize="12sp"
-        android:backgroundTint="@color/accent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mealButton"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/drinkWaterTextButton"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
+        android:backgroundTint="@color/accent"
         android:text="@string/drink_water"
         android:textSize="12sp"
-        android:backgroundTint="@color/accent"
         app:layout_constraintEnd_toStartOf="@+id/medicinesTextButton"
         app:layout_constraintStart_toEndOf="@+id/mealTextButton"
         app:layout_constraintTop_toBottomOf="@+id/drinkWaterButton"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/medicinesTextButton"
@@ -126,20 +126,21 @@
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/accent"
         android:text="@string/medicines"
         android:textSize="12sp"
-        android:backgroundTint="@color/accent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/medicinesButton"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/homeRecpiesRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="0dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title3" />

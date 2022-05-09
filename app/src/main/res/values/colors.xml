@@ -19,6 +19,7 @@
     <color name="icons">#FFFFFFFF</color>
     <color name="divider">#BDBDBD</color>
     <color name="accent_light">#80CBC4</color>
+    <color name="extra_light">#FAF5FF</color>
 
     <color name="night_primary">#4527A0</color>
     <color name="night_primary_dark">#1D1144</color>
