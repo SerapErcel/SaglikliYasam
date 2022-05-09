@@ -96,21 +96,25 @@
 
     <Button
         android:id="@+id/mealTextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="@string/meals"
+        android:textSize="12sp"
+        android:backgroundTint="@color/accent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mealButton"
         tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/drinkWaterTextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:text="@string/drink_water"
+        android:textSize="12sp"
+        android:backgroundTint="@color/accent"
         app:layout_constraintEnd_toStartOf="@+id/medicinesTextButton"
         app:layout_constraintStart_toEndOf="@+id/mealTextButton"
         app:layout_constraintTop_toBottomOf="@+id/drinkWaterButton"
@@ -118,11 +122,13 @@
 
     <Button
         android:id="@+id/medicinesTextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="@string/medicines"
+        android:textSize="12sp"
+        android:backgroundTint="@color/accent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/medicinesButton"
         tools:ignore="TextContrastCheck" />
