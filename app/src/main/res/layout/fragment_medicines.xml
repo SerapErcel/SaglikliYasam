@@ -29,11 +29,13 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
-        android:src="@drawable/logo"
+        android:contentDescription="@string/time_floating_action_button"
+        android:focusable="true"
+        android:src="@drawable/positive"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:focusable="true"
-        android:contentDescription="@string/timefloatingactionbutton" />
+        app:maxImageSize="18dp"
+        app:tint="@color/primary_light" />
 </androidx.constraintlayout.widget.ConstraintLayout>

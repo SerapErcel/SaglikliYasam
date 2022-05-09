@@ -41,12 +41,13 @@
         android:layout_marginBottom="32dp"
         android:backgroundTint="@color/night_primary_light"
         android:clickable="true"
-        android:contentDescription="@string/buton"
+        android:contentDescription="@string/button"
         android:focusable="true"
-        android:src="@android:drawable/ic_input_add"
+        android:src="@drawable/positive"
+        app:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/glass"
         app:layout_constraintEnd_toEndOf="parent"
-        app:rippleColor="@color/night_primary_light"
+        app:maxImageSize="18dp"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -57,9 +58,11 @@
         android:layout_marginBottom="32dp"
         android:backgroundTint="@color/night_primary_light"
         android:clickable="true"
-        android:contentDescription="@string/buton"
+        android:contentDescription="@string/button"
         android:focusable="true"
-        android:src="@android:drawable/button_onoff_indicator_off"
+        android:src="@drawable/negative"
+        app:tint="@color/white"
+        app:maxImageSize="18dp"
         app:layout_constraintBottom_toBottomOf="@+id/glass"
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="@color/night_primary_light" />

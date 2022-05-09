@@ -3,20 +3,19 @@
     <string name="appTitle">SAĞLIKLI YAŞAM</string>
     <string name="logo">logo</string>
     <string name="e_mail">E-Mail</string>
-    <string name="sifre">Şifre</string>
-    <string name="giris_yap">Giriş Yap</string>
-    <string name="kayit_ol">Kayıt Ol</string>
-    <string name="sifremi_unuttum">Şifremi Unuttum</string>
+    <string name="password">Şifre</string>
+    <string name="sign_in">Giriş Yap</string>
+    <string name="forgot_password">Şifremi Unuttum</string>
     <string name="cover">cover</string>
     <string name="title_place_holder">Title Place Holder</string>
     <string name="time_place_holder">Time Place Holder</string>
     <string name="height">Boy (cm)</string>
     <string name="weight">Kilo (kg)</string>
-    <string name="caluculate">Hesapla</string>
+    <string name="calculate">Hesapla</string>
     <string name="design">design</string>
     <string name="onborading_text1">Su İçme, Duruş Düzeltme, Öğün Saati ve İlaç Saati Bildirimleriyle Organize Olun</string>
     <string name="go_on">Devam</string>
-    <string name="buton">buton</string>
+    <string name="button">buton</string>
     <string name="necessaries">1 Adet Malzeme, 2 Adet Malzeme, 1 Adet Malzeme, 2 Adet Malzeme, 1 Adet Malzeme</string>
     <string name="description">Lorem ipsum dolor sit amet.</string>
     <string name="nick_name">Kullanıcı Adı</string>
@@ -32,10 +31,8 @@
     <string name="menu_recipes">Sağlıklı Tarifler</string>
     <string name="menu_exercises">Egzersizler</string>
     <string name="menu_bmi">Vücut Kitle İndeksi Hesapla</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="medicines_time">İlaç Saatleri</string>
-    <string name="timefloatingactionbutton">timeFloatingActionButton</string>
+    <string name="time_floating_action_button">timeFloatingActionButton</string>
     <string name="medicine_name">İlaç ismi</string>
     <string name="add_medicine">İlaç Saati Ekle</string>
     <string name="medicine_time">İlaç Saati</string>
@@ -54,5 +51,9 @@
     <string name="drink_water">Su İçme</string>
     <string name="medicines">İlaçlar</string>
     <string name="title3">SAĞLIKLI TARİFLER</string>
+    <string name="result_title">SONUÇ</string>
+    <string name="result_holder">Result Holder</string>
+    <string name="bmi_title">VÜCUT KİTLE ENDEKSİNİZ</string>
+    <string name="weight_title">İDEAL KİLONUZ</string>
 
 </resources>

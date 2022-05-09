@@ -2,6 +2,6 @@ package com.serapercel.saglikliyasam.util
 
 object Constant {
 
-    const val SPLASH_TIME = 2500L
+    const val SPLASH_TIME = 2000L
 
 }

@@ -60,7 +60,7 @@
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="@string/sifre"
+        android:hint="@string/password"
         android:importantForAutofill="no"
         android:inputType="numberPassword"
         android:paddingHorizontal="20dp"

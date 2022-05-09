@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single" >
         <item
             android:id="@+id/recipesFragment"
             android:title="@string/menu_recipes"
@@ -15,8 +14,8 @@
             android:icon="@drawable/heart"/>
         <item
             android:id="@+id/bmiCalculateFragment"
-            android:icon="@drawable/heart"
-            android:title="@string/menu_bmi"/>
+            android:title="@string/menu_bmi"
+            android:icon="@drawable/heart"/>
         <item
             android:id="@+id/medicinesFragment"
             android:title="@string/medicines_time"
