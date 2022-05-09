@@ -51,5 +51,9 @@
     <string name="drink_water">Su İçme</string>
     <string name="medicines">İlaçlar</string>
     <string name="title3">SAĞLIKLI TARİFLER</string>
+    <string name="result_title">SONUÇ</string>
+    <string name="result_holder">Result Holder</string>
+    <string name="bmi_title">VÜCUT KİTLE ENDEKSİNİZ</string>
+    <string name="weight_title">İDEAL KİLONUZ</string>
 
 </resources>
