@@ -8,12 +8,12 @@
     <fragment
         android:id="@+id/bmiCalculateFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.bmi_calculate.BmiCalculateFragment"
-        android:label="fragment_bmi_calculate"
+        android:label="Vücut Kitle Endeksi Hesapla"
         tools:layout="@layout/fragment_bmi_calculate" />
     <fragment
         android:id="@+id/exerciseDetailFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.exercise_detail.ExerciseDetailFragment"
-        android:label="fragment_exercise_detail"
+        android:label="Egzersiz Detayı"
         tools:layout="@layout/fragment_exercise_detail" >
         <argument
             android:name="exerciseID"
@@ -22,7 +22,7 @@
     <fragment
         android:id="@+id/exercisesFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.exercises.ExercisesFragment"
-        android:label="fragment_exercises"
+        android:label="Egzersizler"
         tools:layout="@layout/fragment_exercises" >
         <action
             android:id="@+id/action_exercisesFragment_to_exerciseDetailFragment"
@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/recipesFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.recipes.RecipesFragment"
-        android:label="fragment_recipes"
+        android:label="Sağlıklı Tarifler"
         tools:layout="@layout/fragment_recipes" >
         <action
             android:id="@+id/action_recipesFragment_to_recipeDetailFragment"
@@ -40,8 +40,9 @@
     <fragment
         android:id="@+id/recipeDetailFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.recipe_detail.RecipeDetailFragment"
-        android:label="fragment_recipe_detail"
+        android:label="Tarif Detayı"
         tools:layout="@layout/fragment_recipe_detail" >
+
         <argument
             android:name="recipeID"
             app:argType="integer" />
@@ -49,7 +50,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.home.HomeFragment"
-        android:label="fragment_home"
+        android:label="Anasayfa"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_exercisesFragment"
@@ -79,7 +80,7 @@
     <fragment
         android:id="@+id/medicinesFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.medicines.MedicinesFragment"
-        android:label="fragment_medicines"
+        android:label="İlaçlar"
         tools:layout="@layout/fragment_medicines" >
         <action
             android:id="@+id/action_medicinesFragment_to_medicineAddFragment"
@@ -88,12 +89,12 @@
     <fragment
         android:id="@+id/medicineAddFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.medicineAdd.MedicineAddFragment"
-        android:label="fragment_medicine_add"
+        android:label="İlaç Ekle"
         tools:layout="@layout/fragment_medicine_add" />
     <fragment
         android:id="@+id/mealsFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.meals.MealsFragment"
-        android:label="fragment_meals"
+        android:label="Öğünler"
         tools:layout="@layout/fragment_meals" >
         <action
             android:id="@+id/action_mealsFragment_to_addMealFragment"
@@ -102,11 +103,11 @@
     <fragment
         android:id="@+id/addMealFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.mealAdd.AddMealFragment"
-        android:label="fragment_add_meal"
+        android:label="Öğün Ekle"
         tools:layout="@layout/fragment_add_meal" />
     <fragment
         android:id="@+id/waterDrinkingFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.waterDrinking.WaterDrinkingFragment"
-        android:label="fragment_water_drinking"
+        android:label="Su İçme"
         tools:layout="@layout/fragment_water_drinking" />
 </navigation>
