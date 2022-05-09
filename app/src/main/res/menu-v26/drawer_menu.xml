@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
@@ -8,27 +7,26 @@
         <item
             android:id="@+id/recipesFragment"
             android:title="@string/menu_recipes"
-            android:icon="@drawable/logo"
-            android:iconTint="@color/accent"/>
+            android:icon="@drawable/heart"/>
         <item
             android:id="@+id/exercisesFragment"
             android:title="@string/menu_exercises"
-            android:icon="@drawable/logo"/>
+            android:icon="@drawable/heart"/>
         <item
             android:id="@+id/bmiCalculateFragment"
             android:title="@string/menu_bmi"
-            android:icon="@drawable/logo"/>
+            android:icon="@drawable/heart"/>
         <item
             android:id="@+id/medicinesFragment"
             android:title="@string/medicines_time"
-            android:icon="@drawable/logo"/>
+            android:icon="@drawable/heart"/>
         <item
             android:id="@+id/mealsFragment"
             android:title="@string/meals_time"
-            android:icon="@drawable/logo"/>
+            android:icon="@drawable/heart"/>
         <item
             android:id="@+id/waterDrinkingFragment"
             android:title="@string/water_drinking"
-            android:icon="@drawable/logo"/>
+            android:icon="@drawable/heart"/>
     </group>
 </menu>
