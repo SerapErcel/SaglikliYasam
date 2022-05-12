@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "353239671559",
+    "project_id": "saglikliyasam-45423",
+    "storage_bucket": "saglikliyasam-45423.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353239671559:android:482873d08ca5e5b5951ba2",
+        "android_client_info": {
+          "package_name": "com.serapercel.saglikliyasam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353239671559-2tu3ag4oq2v6hpd66aqmnejopjvcsmus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe7AGaFeUlEZsSh1NTkIQoTiwHu4HxUvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "353239671559-2tu3ag4oq2v6hpd66aqmnejopjvcsmus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
