@@ -38,6 +38,7 @@ class BmiCalculateFragment : Fragment() {
             results()
         }
     }
+
     private fun results() {
         bmiList = viewModel.calculate(
             binding.editTextHeight.text.toString(),
