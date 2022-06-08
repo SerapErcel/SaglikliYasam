@@ -5,28 +5,23 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-var recipeList = mutableListOf<Recipe>()
-
 @Entity
 data class Recipe(
-    var cover: Int,
-    @ColumnInfo(name = "isim")
+    @ColumnInfo(name = "recipeName")
     @SerializedName("isim")
     var name: String,
-    @ColumnInfo(name = "sure")
+    @ColumnInfo(name = "recipeTime")
     @SerializedName("sure")
     var time: String,
-    @ColumnInfo(name = "malzemeler")
+    @ColumnInfo(name = "recipeNecessaries")
     @SerializedName("malzemeler")
     var necessaries: String,
-    @ColumnInfo(name = "tarif")
+    @ColumnInfo(name = "recipeDescription")
     @SerializedName("tarif")
     var description: String,
-
-
-    @ColumnInfo(name = "gorsel")
+    @ColumnInfo(name = "recipeImage")
     @SerializedName("gorsel")
-    val yemekGorsel: String?
+    val recipeImage: String?
 ) {
 
     @PrimaryKey(autoGenerate = true)
