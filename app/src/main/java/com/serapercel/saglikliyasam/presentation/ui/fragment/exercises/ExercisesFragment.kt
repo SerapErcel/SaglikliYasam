@@ -12,7 +12,7 @@ import com.serapercel.saglikliyasam.databinding.FragmentExercisesBinding
 import com.serapercel.saglikliyasam.model.Exercise
 import com.serapercel.saglikliyasam.model.exerciseList
 import com.serapercel.saglikliyasam.presentation.adapter.ExerciseCardAdapter
-import com.serapercel.saglikliyasam.util.ExerciseClickListener
+import com.serapercel.saglikliyasam.util.listener.ExerciseClickListener
 
 class ExercisesFragment : Fragment(), ExerciseClickListener {
 

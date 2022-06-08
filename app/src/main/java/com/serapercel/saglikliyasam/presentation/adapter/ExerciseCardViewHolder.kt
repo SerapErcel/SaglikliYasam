@@ -3,7 +3,7 @@ package com.serapercel.saglikliyasam.presentation.adapter
 import androidx.recyclerview.widget.RecyclerView
 import com.serapercel.saglikliyasam.databinding.ExerciseCardCellBinding
 import com.serapercel.saglikliyasam.model.Exercise
-import com.serapercel.saglikliyasam.util.ExerciseClickListener
+import com.serapercel.saglikliyasam.util.listener.ExerciseClickListener
 
 class ExerciseCardViewHolder(
     private val exerciseCardCellBinding: ExerciseCardCellBinding,

@@ -1,9 +1,10 @@
 package com.serapercel.saglikliyasam.model
 
+import androidx.room.Entity
+
 var exerciseList = mutableListOf<Exercise>()
 
-val EXERCISE_ID_EXTRA = "exerciseExtra"
-
+@Entity
 class Exercise(
     var cover: Int,
     var name: String,

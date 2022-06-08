@@ -1,7 +1,6 @@
 package com.serapercel.saglikliyasam.presentation.ui.fragment.home
 
 import android.os.Bundle
-import android.util.LayoutDirection
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,14 +13,12 @@ import com.serapercel.saglikliyasam.databinding.FragmentHomeBinding
 import com.serapercel.saglikliyasam.model.Exercise
 import com.serapercel.saglikliyasam.model.Recipe
 import com.serapercel.saglikliyasam.model.exerciseList
-import com.serapercel.saglikliyasam.model.recipeList
-import com.serapercel.saglikliyasam.presentation.adapter.CardAdapter
-import com.serapercel.saglikliyasam.presentation.adapter.ExerciseCardAdapter
 import com.serapercel.saglikliyasam.presentation.adapter.HomeExerciseCellAdapter
 import com.serapercel.saglikliyasam.presentation.adapter.HomeRecipeCellAdapter
-import com.serapercel.saglikliyasam.presentation.ui.fragment.exercises.ExercisesFragmentDirections
-import com.serapercel.saglikliyasam.util.ExerciseClickListener
-import com.serapercel.saglikliyasam.util.RecipeClickListener
+import com.serapercel.saglikliyasam.util.listener.ExerciseClickListener
+import com.serapercel.saglikliyasam.util.listener.RecipeClickListener
+
+var recipeList = mutableListOf<Recipe>()
 
 class HomeFragment : Fragment(), ExerciseClickListener, RecipeClickListener {
 
@@ -99,7 +96,7 @@ class HomeFragment : Fragment(), ExerciseClickListener, RecipeClickListener {
     // todo "change mock data with real data"
     private fun populateRecipes() {
         val recipe1 = Recipe(
-            R.drawable.patlican_pizza,
+            recipeImage = R.drawable.patlican_pizza.toString(),
             name = "Patlıcan Pizza",
             time = "40 dakika",
             necessaries = "2 adet patlıcan 3 adet domates 1 yemek kaşığı salça 1 dilim sucuk 1 çay bardağı haşlanmış mısır",
@@ -123,7 +120,7 @@ class HomeFragment : Fragment(), ExerciseClickListener, RecipeClickListener {
 
     override fun onClick(recipe: Recipe) {
         val action = HomeFragmentDirections.actionHomeFragmentToRecipeDetailFragment(
-            recipe.id!!
+            recipe.uuid
         )
         findNavController().navigate(action)
     }
