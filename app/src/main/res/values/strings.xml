@@ -55,5 +55,6 @@
     <string name="result_holder">Result Holder</string>
     <string name="bmi_title">VÜCUT KİTLE ENDEKSİNİZ</string>
     <string name="weight_title">İDEAL KİLONUZ</string>
+    <string name="error">Hata, Tekrar Deneyiniz!</string>
 
 </resources>

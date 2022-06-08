@@ -7,8 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.serapercel.saglikliyasam.databinding.FragmentRecipeDetailBinding
 import com.serapercel.saglikliyasam.model.Recipe
-import com.serapercel.saglikliyasam.model.recipeList
+import com.serapercel.saglikliyasam.presentation.ui.fragment.home.recipeList
 import androidx.navigation.fragment.navArgs as navArgs
+
 
 class RecipeDetailFragment : Fragment() {
 
@@ -27,7 +28,7 @@ class RecipeDetailFragment : Fragment() {
         val recipe = recipeFromID(recipeID)
         if (recipe != null) {
             binding.apply {
-                cover.setImageResource(recipe.cover)
+               // cover.setImageResource(recipe.cover)
                 title.text = recipe.name
                 time.text = recipe.time
                 necessaries.text = recipe.necessaries
@@ -47,7 +48,7 @@ class RecipeDetailFragment : Fragment() {
         val recipe = recipeFromID(recipeID)
         if (recipe != null) {
             binding.apply {
-                cover.setImageResource(recipe.cover)
+                //cover.setImageResource(recipe.cover)
                 title.text = recipe.name
                 time.text = recipe.time
                 necessaries.text = recipe.necessaries
@@ -63,7 +64,7 @@ class RecipeDetailFragment : Fragment() {
 
     private fun recipeFromID(recipeID: Int): Recipe? {
         for (recipe in recipeList) {
-            if (recipe.id == recipeID)
+            if (recipe.uuid == recipeID)
                 return recipe
         }
         return null
