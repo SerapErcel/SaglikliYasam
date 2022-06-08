@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.serapercel.saglikliyasam.databinding.HomeRecipeCellBinding
 import com.serapercel.saglikliyasam.model.Recipe
-import com.serapercel.saglikliyasam.util.RecipeClickListener
+import com.serapercel.saglikliyasam.util.listener.RecipeClickListener
 
 class HomeRecipeCellAdapter(
     private val recipes: List<Recipe>,

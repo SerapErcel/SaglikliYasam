@@ -1,14 +1,31 @@
 package com.serapercel.saglikliyasam.model
 
-var recipeList = mutableListOf<Recipe>()
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
 
-val RECIPE_ID_EXTRA = "recipeExtra"
-
-class Recipe(
-    var cover: Int,
+@Entity
+data class Recipe(
+    @ColumnInfo(name = "recipeName")
+    @SerializedName("isim")
     var name: String,
+    @ColumnInfo(name = "recipeTime")
+    @SerializedName("sure")
     var time: String,
+    @ColumnInfo(name = "recipeNecessaries")
+    @SerializedName("malzemeler")
     var necessaries: String,
+    @ColumnInfo(name = "recipeDescription")
+    @SerializedName("tarif")
     var description: String,
-    val id: Int? = recipeList.size
-)
+    @ColumnInfo(name = "recipeImage")
+    @SerializedName("gorsel")
+    val recipeImage: String?
+) {
+
+    @PrimaryKey(autoGenerate = true)
+    var uuid: Int = 0
+
+}
+

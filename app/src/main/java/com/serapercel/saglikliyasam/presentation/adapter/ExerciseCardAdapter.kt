@@ -5,8 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.serapercel.saglikliyasam.databinding.ExerciseCardCellBinding
 import com.serapercel.saglikliyasam.model.Exercise
-import com.serapercel.saglikliyasam.presentation.ui.fragment.home.HomeFragment
-import com.serapercel.saglikliyasam.util.ExerciseClickListener
+import com.serapercel.saglikliyasam.util.listener.ExerciseClickListener
 
 class ExerciseCardAdapter(
     private val exercises: List<Exercise>,
