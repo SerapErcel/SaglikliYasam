@@ -1,14 +1,30 @@
 package com.serapercel.saglikliyasam.model
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
-
-var exerciseList = mutableListOf<Exercise>()
+import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
 
 @Entity
 class Exercise(
-    var cover: Int,
+    @ColumnInfo(name = "exerciseName")
+    @SerializedName("isim")
     var name: String,
-    var time: String,
+    @ColumnInfo(name = "exerciseRepeat")
+    @SerializedName("tekrar")
+    var repeat: String,
+    @ColumnInfo(name = "exerciseDescription")
+    @SerializedName("aciklama")
     var description: String,
-    val id: Int? = exerciseList.size
-)
+    @ColumnInfo(name = "exercise")
+    @SerializedName("uygulama")
+    var exercise: String,
+    @ColumnInfo(name = "exerciseImage")
+    @SerializedName("gorsel")
+    val exerciseImage: String?,
+) {
+
+    @PrimaryKey(autoGenerate = true)
+    var uuid: Int = 0
+
+}
