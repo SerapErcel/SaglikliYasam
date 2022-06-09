@@ -3,11 +3,10 @@ package com.serapercel.saglikliyasam.presentation.ui.fragment.recipes
 import android.app.Application
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
-import androidx.room.Database
 import com.serapercel.saglikliyasam.database.RDatabase
 import com.serapercel.saglikliyasam.model.Recipe
 import com.serapercel.saglikliyasam.util.base.BaseViewModel
-import com.serapercel.saglikliyasam.database.RecipeSharedPreferences
+import com.serapercel.saglikliyasam.database.SharedPreferences
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
@@ -24,7 +23,7 @@ class RecipesViewModel(application: Application) : BaseViewModel(application) {
     private var updateTime = 10 * 60 * 1000 * 1000 * 1000L
     private val recipeAPIService = RecipeAPIService()
     private val disposable = CompositeDisposable()
-    private val recipeSharedPreferences = RecipeSharedPreferences(getApplication())
+    private val recipeSharedPreferences = SharedPreferences(getApplication())
 
     fun refreshData() {
         val saveTime = recipeSharedPreferences.getTime()

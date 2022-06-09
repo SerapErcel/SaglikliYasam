@@ -4,28 +4,29 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
 
-class RecipeSharedPreferences {
+class SharedPreferences {
 
     companion object {
         private const val TIME = "time"
         private var sharedPreferences: SharedPreferences? = null
 
         @Volatile
-        private var instance: RecipeSharedPreferences? = null
+        private var instance: com.serapercel.saglikliyasam.database.SharedPreferences? = null
 
         private val lock = Any()
-        operator fun invoke(context: Context): RecipeSharedPreferences = instance ?: synchronized(
-            lock
-        ) {
-            instance ?: createRecipeSharedPreference(context).also {
-                instance = it
+        operator fun invoke(context: Context): com.serapercel.saglikliyasam.database.SharedPreferences =
+            instance ?: synchronized(
+                lock
+            ) {
+                instance ?: createSharedPreference(context).also {
+                    instance = it
+                }
             }
-        }
 
-        private fun createRecipeSharedPreference(context: Context): RecipeSharedPreferences {
+        private fun createSharedPreference(context: Context): com.serapercel.saglikliyasam.database.SharedPreferences {
             sharedPreferences =
                 androidx.preference.PreferenceManager.getDefaultSharedPreferences(context)
-            return RecipeSharedPreferences()
+            return SharedPreferences()
         }
 
     }
