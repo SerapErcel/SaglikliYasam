@@ -58,8 +58,19 @@ class ExercisesViewModel(application: Application) : BaseViewModel(application) 
         )
     }
 
-    private fun storeInSQLite(t: List<Exercise>) {
-        TODO("Not yet implemented")
+    private fun storeInSQLite(exerciseList: List<Exercise>) {
+        launch {
+            val dao = RDatabase(getApplication()).exerciseDao()
+            dao.deleteAllExercise()
+            val uuidlist = dao.insertAll(*exerciseList.toTypedArray())
+            var i = 0
+            while (i < exerciseList.size) {
+                exerciseList[i].uuid = uuidlist[i].toInt()
+                i += 1
+            }
+            showExercises(exerciseList)
+        }
+        SharedPreferences.saveTime(System.nanoTime())
     }
 
     private fun getDataFromSQLite() {
