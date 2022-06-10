@@ -42,6 +42,38 @@ class ExercisesFragment : Fragment(), ExerciseClickListener {
     }
 
     private fun observeLiveData() {
+        viewModel.exercises.observe(viewLifecycleOwner) { exerciseList ->
+            exerciseList?.let {
+                updateRecyclerList(exerciseList)
+            }
+        }
+        viewModel.exerciseErrorMessage.observe(viewLifecycleOwner) { error ->
+            error?.let {
+                if (it) {
+                    binding.exerciseRecyclerView.visibility = View.GONE
+                    binding.exerciseListError.visibility = View.VISIBLE
+                } else {
+                    binding.exerciseListError.visibility = View.GONE
+                    binding.exerciseRecyclerView.visibility = View.VISIBLE
+                }
+            }
+        }
+        viewModel.exerciseDownloading.observe(viewLifecycleOwner) { uploading ->
+            uploading?.let {
+                if (it) {
+                    binding.exerciseRecyclerView.visibility = View.GONE
+                    binding.exerciseListError.visibility = View.GONE
+                    binding.exerciseListProgress.visibility = View.VISIBLE
+                } else {
+                    binding.exerciseListProgress.visibility = View.GONE
+                    binding.exerciseRecyclerView.visibility = View.VISIBLE
+
+                }
+            }
+        }
+    }
+
+    private fun updateRecyclerList(exerciseList: List<Exercise>) {
         TODO("Not yet implemented")
     }
 
