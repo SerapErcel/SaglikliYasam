@@ -74,12 +74,14 @@ class ExercisesFragment : Fragment(), ExerciseClickListener {
     }
 
     private fun updateRecyclerList(exerciseList: List<Exercise>) {
-        TODO("Not yet implemented")
+        binding.exerciseRecyclerView.visibility = View.VISIBLE
+        binding.exerciseRecyclerView.adapter =
+            ExerciseCardAdapter(exerciseList, this, requireContext())
     }
 
     override fun onClick(exercise: Exercise) {
         val action = ExercisesFragmentDirections.actionExercisesFragmentToExerciseDetailFragment(
-            exercise.uuid!!
+            exercise.uuid
         )
         findNavController().navigate(action)
     }
