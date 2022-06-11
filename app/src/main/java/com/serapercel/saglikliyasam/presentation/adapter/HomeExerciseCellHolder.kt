@@ -16,9 +16,11 @@ class HomeExerciseCellHolder(
 ) : RecyclerView.ViewHolder(homeExerciseCellBinding.root) {
 
     fun bindExercise(exercise: Exercise) {
-        homeExerciseCellBinding.exerciseCover.downloadImage(exercise.exerciseImage, placeHolder(context))
+        homeExerciseCellBinding.exerciseCover.downloadImage(
+            exercise.exerciseImage,
+            placeHolder(context)
+        )
         homeExerciseCellBinding.title.text = exercise.name
-        homeExerciseCellBinding.time.text = exercise.repeat
 
         homeExerciseCellBinding.exerciseCell.setOnClickListener {
             clickListener.onClick(exercise)
