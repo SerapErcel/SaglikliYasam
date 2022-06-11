@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,14 +13,20 @@ import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.FragmentHomeBinding
 import com.serapercel.saglikliyasam.model.Exercise
 import com.serapercel.saglikliyasam.model.Recipe
+import com.serapercel.saglikliyasam.presentation.adapter.ExerciseCardAdapter
 import com.serapercel.saglikliyasam.presentation.adapter.HomeExerciseCellAdapter
 import com.serapercel.saglikliyasam.presentation.adapter.HomeRecipeCellAdapter
+import com.serapercel.saglikliyasam.presentation.adapter.RecipeCardAdapter
+import com.serapercel.saglikliyasam.presentation.ui.fragment.exercises.ExercisesViewModel
+import com.serapercel.saglikliyasam.presentation.ui.fragment.recipes.RecipesViewModel
 import com.serapercel.saglikliyasam.util.listener.ExerciseClickListener
 import com.serapercel.saglikliyasam.util.listener.RecipeClickListener
 
 var recipeList = mutableListOf<Recipe>()
 
 class HomeFragment : Fragment(), ExerciseClickListener, RecipeClickListener {
+
+    private lateinit var viewModel: HomeViewModel
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -53,20 +60,85 @@ class HomeFragment : Fragment(), ExerciseClickListener, RecipeClickListener {
         binding.mealTextButton.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_mealsFragment)
         }
+
+        viewModel = ViewModelProvider(requireActivity()).get(HomeViewModel::class.java)
+        viewModel.refreshData()
+
+
+        observeLiveData()
     }
 
+    private fun observeLiveData() {
+        viewModel.exercises.observe(viewLifecycleOwner) { exerciseList ->
+            exerciseList?.let {
+                updateRecyclerExerciseList(exerciseList)
+            }
+        }
+        viewModel.exerciseErrorMessage.observe(viewLifecycleOwner) { error ->
+            error?.let {
+                if (it) {
+                    binding.homeExerciseRecyclerView.visibility = View.GONE
+                } else {
+                    binding.homeExerciseRecyclerView.visibility = View.VISIBLE
+                }
+            }
+        }
+        viewModel.exerciseDownloading.observe(viewLifecycleOwner) { uploading ->
+            uploading?.let {
+                if (it) {
+                    binding.homeExerciseRecyclerView.visibility = View.GONE
+                } else {
+                    binding.homeExerciseRecyclerView.visibility = View.VISIBLE
+
+                }
+            }
+        }
+        viewModel.recipes.observe(viewLifecycleOwner) { recipeList ->
+            recipeList?.let {
+                updateRecyclerRecipeList(recipeList)
+            }
+        }
+        viewModel.recipeErrorMessage.observe(viewLifecycleOwner) { error ->
+            error?.let {
+                if (it) {
+                    binding.homeRecipesRecyclerView.visibility = View.GONE
+                } else {
+                    binding.homeRecipesRecyclerView.visibility = View.VISIBLE
+                }
+            }
+        }
+        viewModel.recipeDownloading.observe(viewLifecycleOwner) { uploading ->
+            uploading?.let {
+                if (it) {
+                    binding.homeRecipesRecyclerView.visibility = View.GONE
+                } else {
+                    binding.homeRecipesRecyclerView.visibility = View.VISIBLE
+
+                }
+            }
+        }
+    }
+
+    private fun updateRecyclerExerciseList(exerciseList: List<Exercise>) {
+        binding.homeExerciseRecyclerView.visibility = View.VISIBLE
+        binding.homeExerciseRecyclerView.adapter =
+            HomeExerciseCellAdapter(exerciseList, this, requireContext())
+    }
+    private fun updateRecyclerRecipeList(recipeList: List<Recipe>) {
+        binding.homeRecipesRecyclerView.visibility = View.VISIBLE
+        binding.homeRecipesRecyclerView.adapter =
+            HomeRecipeCellAdapter(recipeList, this, requireContext())
+    }
     private fun initView() {
-        populateRecipes()
 
         binding.homeExerciseRecyclerView.apply {
             layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-            adapter =
-                HomeExerciseCellAdapter(emptyList(), this@HomeFragment,context)
+            adapter = HomeExerciseCellAdapter(emptyList(), this@HomeFragment, requireContext())
         }
-        binding.homeRecpiesRecyclerView.apply {
+        binding.homeRecipesRecyclerView.apply {
             layoutManager = GridLayoutManager(context, 1)
-            adapter = HomeRecipeCellAdapter(recipeList, this@HomeFragment)
+            adapter = HomeRecipeCellAdapter(emptyList(), this@HomeFragment, requireContext())
         }
     }
 
@@ -76,28 +148,9 @@ class HomeFragment : Fragment(), ExerciseClickListener, RecipeClickListener {
     }
 
 
-
-    // todo "change mock data with real data"
-    private fun populateRecipes() {
-        val recipe1 = Recipe(
-            recipeImage = R.drawable.patlican_pizza.toString(),
-            name = "Patlıcan Pizza",
-            time = "40 dakika",
-            necessaries = "2 adet patlıcan 3 adet domates 1 yemek kaşığı salça 1 dilim sucuk 1 çay bardağı haşlanmış mısır",
-            description = "patlıcanları uzun uzun dilimle, tepsinin altına diz, üzerine salçalı sos yay, mantar domates sucuk vb. malzmeleri diz fırına at en son üzerine kaşar peyniri rendele ve afiyet olsun."
-        )
-        recipeList.add(recipe1)
-        recipeList.add(recipe1)
-        recipeList.add(recipe1)
-        recipeList.add(recipe1)
-        recipeList.add(recipe1)
-        recipeList.add(recipe1)
-
-    }
-
     override fun onClick(exercise: Exercise) {
         val action = HomeFragmentDirections.actionHomeFragmentToExerciseDetailFragment(
-            exercise.uuid!!
+            exercise.uuid
         )
         findNavController().navigate(action)
     }

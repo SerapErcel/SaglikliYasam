@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -44,15 +43,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mealTextButton" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/homeExerciseRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="165dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title1" />
+
 
     <ImageButton
         android:id="@+id/mealButton"
@@ -133,8 +134,9 @@
         app:layout_constraintTop_toBottomOf="@+id/medicinesButton"
         tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/homeRecpiesRecyclerView"
+        android:id="@+id/homeRecipesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
@@ -144,5 +146,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title3" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
