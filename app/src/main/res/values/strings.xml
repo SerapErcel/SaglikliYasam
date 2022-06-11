@@ -56,5 +56,7 @@
     <string name="bmi_title">VÜCUT KİTLE ENDEKSİNİZ</string>
     <string name="weight_title">İDEAL KİLONUZ</string>
     <string name="error">Hata, Tekrar Deneyiniz!</string>
+    <string name="titleNecessaries">Malzemeler</string>
+    <string name="titleDescription">Yapılışı</string>
 
 </resources>
