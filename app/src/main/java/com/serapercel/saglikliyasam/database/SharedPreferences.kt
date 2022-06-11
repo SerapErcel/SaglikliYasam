@@ -7,7 +7,9 @@ import androidx.core.content.edit
 class SharedPreferences {
 
     companion object {
-        private const val TIME = "time"
+        private const val TimeRecipe = "timeRecipe"
+        private const val TimeExercise = "timeExercise"
+
         private var sharedPreferences: SharedPreferences? = null
 
         @Volatile
@@ -31,12 +33,18 @@ class SharedPreferences {
 
     }
 
-    fun saveTime(time: Long) {
+    fun saveTimeRecipe(time: Long) {
         sharedPreferences?.edit(commit = true) {
-            putLong(TIME, time)
+            putLong(TimeRecipe, time)
         }
     }
 
-    fun getTime() = sharedPreferences?.getLong(TIME, 0)
+    fun getTimeRecipe() = sharedPreferences?.getLong(TimeRecipe, 0)
+    fun saveTimeExercise(time: Long) {
+        sharedPreferences?.edit(commit = true) {
+            putLong(TimeExercise, time)
+        }
+    }
 
+    fun getTimeExercise() = sharedPreferences?.getLong(TimeExercise, 0)
 }

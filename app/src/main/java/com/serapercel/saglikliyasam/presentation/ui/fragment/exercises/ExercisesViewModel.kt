@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import com.serapercel.saglikliyasam.database.RDatabase
 import com.serapercel.saglikliyasam.database.SharedPreferences
 import com.serapercel.saglikliyasam.model.Exercise
-import com.serapercel.saglikliyasam.model.Recipe
 import com.serapercel.saglikliyasam.service.ExerciseAPIService
 import com.serapercel.saglikliyasam.util.base.BaseViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -27,7 +26,7 @@ class ExercisesViewModel(application: Application) : BaseViewModel(application) 
     private val SharedPreferences = SharedPreferences(getApplication())
 
     fun refreshData() {
-        val saveTime = SharedPreferences.getTime()
+        val saveTime = SharedPreferences.getTimeExercise()
         if (saveTime != null && saveTime != 0L && System.nanoTime() - saveTime < updateTime) {
             getDataFromSQLite()
         } else {
@@ -70,7 +69,7 @@ class ExercisesViewModel(application: Application) : BaseViewModel(application) 
             }
             showExercises(exerciseList)
         }
-        SharedPreferences.saveTime(System.nanoTime())
+        SharedPreferences.saveTimeExercise(System.nanoTime())
     }
 
     private fun getDataFromSQLite() {

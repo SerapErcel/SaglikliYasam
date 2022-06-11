@@ -20,21 +20,16 @@ abstract class RDatabase : RoomDatabase() {
         private val lock = Any()
 
         operator fun invoke(context: Context) = instance ?: synchronized(lock) {
-            instance ?: createDatabaseRecipe(context).also {
+            instance ?: createDatabase(context).also {
                 instance = it
             }
         }
 
-        private fun createDatabaseRecipe(context: Context) = Room.databaseBuilder(
+        private fun createDatabase(context: Context) = Room.databaseBuilder(
             context.applicationContext,
             RDatabase::class.java,
-            "Recipe"
+            "Database"
         ).build()
 
-        private fun createDatabaseExercise(context: Context) = Room.databaseBuilder(
-            context.applicationContext,
-            RDatabase::class.java,
-            "Exercise"
-        ).build()
     }
 }
