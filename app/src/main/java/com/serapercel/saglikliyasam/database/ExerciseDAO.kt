@@ -4,7 +4,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.serapercel.saglikliyasam.model.Exercise
-import com.serapercel.saglikliyasam.model.Recipe
 
 @Dao
 interface ExerciseDAO {
@@ -13,29 +12,12 @@ interface ExerciseDAO {
     suspend fun insertAll(vararg exercise: Exercise): List<Long>
 
     @Query("SELECT * FROM Exercise")
-    suspend fun getAllRecipe(): List<Recipe>
+    suspend fun getAllExercise(): List<Exercise>
 
-    @Query("SELECT * FROM Exercise WHERE uuid = :recipeId")
-    suspend fun getRecipe(recipeId: Int): Recipe
+    @Query("SELECT * FROM Exercise WHERE uuid = :exerciseId")
+    suspend fun getExercise(exerciseId: Int): Exercise
 
     @Query("DELETE FROM Exercise")
-    suspend fun deleteAllRecipe()
+    suspend fun deleteAllExercise()
 }
 
-
-/*
-@Dao
-interface RecipeDAO {
-    //Data Access Object
-    @Insert
-    suspend fun insertAll(vararg recipe: Recipe): List<Long>
-
-    @Query("SELECT * FROM Recipe")
-    suspend fun getAllRecipe(): List<Recipe>
-
-    @Query("SELECT * FROM Recipe WHERE uuid = :recipeId")
-    suspend fun getRecipe(recipeId: Int): Recipe
-
-    @Query("DELETE FROM Recipe")
-    suspend fun deleteAllRecipe()
-}*/

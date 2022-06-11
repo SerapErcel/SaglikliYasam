@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-@Entity
+@Entity(tableName = "Recipe")
 data class Recipe(
     @ColumnInfo(name = "recipeName")
     @SerializedName("isim")
