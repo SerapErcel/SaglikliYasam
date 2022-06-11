@@ -13,12 +13,8 @@ import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.FragmentHomeBinding
 import com.serapercel.saglikliyasam.model.Exercise
 import com.serapercel.saglikliyasam.model.Recipe
-import com.serapercel.saglikliyasam.presentation.adapter.ExerciseCardAdapter
 import com.serapercel.saglikliyasam.presentation.adapter.HomeExerciseCellAdapter
 import com.serapercel.saglikliyasam.presentation.adapter.HomeRecipeCellAdapter
-import com.serapercel.saglikliyasam.presentation.adapter.RecipeCardAdapter
-import com.serapercel.saglikliyasam.presentation.ui.fragment.exercises.ExercisesViewModel
-import com.serapercel.saglikliyasam.presentation.ui.fragment.recipes.RecipesViewModel
 import com.serapercel.saglikliyasam.util.listener.ExerciseClickListener
 import com.serapercel.saglikliyasam.util.listener.RecipeClickListener
 
@@ -124,11 +120,13 @@ class HomeFragment : Fragment(), ExerciseClickListener, RecipeClickListener {
         binding.homeExerciseRecyclerView.adapter =
             HomeExerciseCellAdapter(exerciseList, this, requireContext())
     }
+
     private fun updateRecyclerRecipeList(recipeList: List<Recipe>) {
         binding.homeRecipesRecyclerView.visibility = View.VISIBLE
         binding.homeRecipesRecyclerView.adapter =
             HomeRecipeCellAdapter(recipeList, this, requireContext())
     }
+
     private fun initView() {
 
         binding.homeExerciseRecyclerView.apply {

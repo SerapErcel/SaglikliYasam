@@ -43,7 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mealTextButton" />
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/homeExerciseRecyclerView"
         android:layout_width="match_parent"
@@ -53,7 +52,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title1" />
-
 
     <ImageButton
         android:id="@+id/mealButton"
@@ -146,6 +144,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title3" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

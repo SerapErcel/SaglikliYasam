@@ -15,7 +15,10 @@ class ExerciseCardViewHolder(
 ) : RecyclerView.ViewHolder(exerciseCardCellBinding.root) {
 
     fun bindExercise(exercise: Exercise) {
-        exerciseCardCellBinding.exerciseCover.downloadImage(exercise.exerciseImage, placeHolder(context))
+        exerciseCardCellBinding.exerciseCover.downloadImage(
+            exercise.exerciseImage,
+            placeHolder(context)
+        )
         exerciseCardCellBinding.title.text = exercise.name
         exerciseCardCellBinding.time.text = exercise.repeat
 

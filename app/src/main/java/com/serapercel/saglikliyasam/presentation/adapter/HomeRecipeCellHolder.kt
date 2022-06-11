@@ -15,7 +15,7 @@ class HomeRecipeCellHolder(
 ) : RecyclerView.ViewHolder(cardCellBinding.root) {
 
     fun bindRecipe(recipe: Recipe) {
-       cardCellBinding.recipeCover.downloadImage(recipe.recipeImage, placeHolder(context))
+        cardCellBinding.recipeCover.downloadImage(recipe.recipeImage, placeHolder(context))
         cardCellBinding.title.text = recipe.name
         cardCellBinding.time.text = recipe.time
 

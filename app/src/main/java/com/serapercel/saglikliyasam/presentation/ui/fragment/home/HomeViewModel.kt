@@ -35,7 +35,6 @@ class HomeViewModel(application: Application) : BaseViewModel(application) {
     private val recipeSharedPreferences = SharedPreferences(getApplication())
 
 
-
     fun refreshData() {
         val saveTime = SharedPreferences.getTimeExercise()
         if (saveTime != null && saveTime != 0L && System.nanoTime() - saveTime < updateTime) {
@@ -71,6 +70,7 @@ class HomeViewModel(application: Application) : BaseViewModel(application) {
         )
 
     }
+
     private fun getRecipeDataFromInternet() {
         recipeDownloading.value = true
         disposable.add(
@@ -133,6 +133,7 @@ class HomeViewModel(application: Application) : BaseViewModel(application) {
             showExercises(exerciseList)
         }
     }
+
     private fun getRecipeDataFromSQLite() {
         recipeDownloading.value = true
         launch {
@@ -146,6 +147,7 @@ class HomeViewModel(application: Application) : BaseViewModel(application) {
         exerciseErrorMessage.value = false
         exerciseDownloading.value = false
     }
+
     private fun showRecipes(recipeList: List<Recipe>) {
         recipes.value = recipeList
         recipeErrorMessage.value = false

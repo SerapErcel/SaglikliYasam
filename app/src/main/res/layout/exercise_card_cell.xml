@@ -50,6 +50,7 @@
                 android:text="@string/time_place_holder"
                 android:textColor="@color/night_primary_dark"
                 android:textSize="12sp" />
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
