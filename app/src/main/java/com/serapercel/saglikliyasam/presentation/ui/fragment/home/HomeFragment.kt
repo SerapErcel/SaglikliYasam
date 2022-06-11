@@ -12,7 +12,6 @@ import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.FragmentHomeBinding
 import com.serapercel.saglikliyasam.model.Exercise
 import com.serapercel.saglikliyasam.model.Recipe
-import com.serapercel.saglikliyasam.model.exerciseList
 import com.serapercel.saglikliyasam.presentation.adapter.HomeExerciseCellAdapter
 import com.serapercel.saglikliyasam.presentation.adapter.HomeRecipeCellAdapter
 import com.serapercel.saglikliyasam.util.listener.ExerciseClickListener
@@ -57,14 +56,13 @@ class HomeFragment : Fragment(), ExerciseClickListener, RecipeClickListener {
     }
 
     private fun initView() {
-        populateExercises()
         populateRecipes()
 
         binding.homeExerciseRecyclerView.apply {
             layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             adapter =
-                HomeExerciseCellAdapter(exerciseList, this@HomeFragment)
+                HomeExerciseCellAdapter(emptyList(), this@HomeFragment,context)
         }
         binding.homeRecpiesRecyclerView.apply {
             layoutManager = GridLayoutManager(context, 1)
@@ -77,21 +75,7 @@ class HomeFragment : Fragment(), ExerciseClickListener, RecipeClickListener {
         _binding = null
     }
 
-    // todo "change mock data with real data"
-    private fun populateExercises() {
-        val exercise1 = Exercise(
-            R.drawable.exercise,
-            name = "Isınma Egzersizi",
-            time = "3 dakika",
-            description = "Isınma egzersizini verilen süre boyunca bulunduğunuz yerde tekrar tekar uygulayınız. "
-        )
-        exerciseList.add(exercise1)
-        exerciseList.add(exercise1)
-        exerciseList.add(exercise1)
-        exerciseList.add(exercise1)
-        exerciseList.add(exercise1)
-        exerciseList.add(exercise1)
-    }
+
 
     // todo "change mock data with real data"
     private fun populateRecipes() {
@@ -113,7 +97,7 @@ class HomeFragment : Fragment(), ExerciseClickListener, RecipeClickListener {
 
     override fun onClick(exercise: Exercise) {
         val action = HomeFragmentDirections.actionHomeFragmentToExerciseDetailFragment(
-            exercise.id!!
+            exercise.uuid!!
         )
         findNavController().navigate(action)
     }

@@ -15,20 +15,21 @@ import kotlinx.coroutines.launch
 import com.serapercel.saglikliyasam.service.RecipeAPIService
 
 class RecipesViewModel(application: Application) : BaseViewModel(application) {
-    
+
     val recipes = MutableLiveData<List<Recipe>>()
     val recipeErrorMessage = MutableLiveData<Boolean>()
     val recipeDownloading = MutableLiveData<Boolean>()
-    
+
     private var updateTime = 10 * 60 * 1000 * 1000 * 1000L
     private val recipeAPIService = RecipeAPIService()
     private val disposable = CompositeDisposable()
     private val recipeSharedPreferences = SharedPreferences(getApplication())
 
     fun refreshData() {
-        val saveTime = recipeSharedPreferences.getTime()
+        val saveTime = recipeSharedPreferences.getTimeRecipe()
         if (saveTime != null && saveTime != 0L && System.nanoTime() - saveTime < updateTime) {
             getDataFromSQLite()
+
         } else {
             getDataFromInternet()
         }
@@ -85,9 +86,10 @@ class RecipesViewModel(application: Application) : BaseViewModel(application) {
                 recipeList[i].uuid = uuidList[i].toInt()
                 i += 1
             }
+
             showRecipes(recipeList)
         }
-        recipeSharedPreferences.saveTime(System.nanoTime())
+        recipeSharedPreferences.saveTimeRecipe(System.nanoTime())
     }
 
 }
