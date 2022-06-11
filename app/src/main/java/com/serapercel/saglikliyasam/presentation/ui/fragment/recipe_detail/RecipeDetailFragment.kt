@@ -5,13 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProviders
 import com.serapercel.saglikliyasam.databinding.FragmentRecipeDetailBinding
-import com.serapercel.saglikliyasam.model.Recipe
-import com.serapercel.saglikliyasam.presentation.ui.fragment.home.recipeList
+import com.serapercel.saglikliyasam.util.downloadImage
+import com.serapercel.saglikliyasam.util.placeHolder
 import androidx.navigation.fragment.navArgs as navArgs
 
-
 class RecipeDetailFragment : Fragment() {
+
+    private lateinit var viewModel: RecipeDetailViewModel
+    private var recipeID = 0
 
     private var _binding: FragmentRecipeDetailBinding? = null
     private val binding get() = _binding!!
@@ -23,36 +26,30 @@ class RecipeDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentRecipeDetailBinding.inflate(inflater, container, false)
-        val view = binding.root
-        val recipeID = args.recipeID
-        val recipe = recipeFromID(recipeID)
-        if (recipe != null) {
-            binding.apply {
-               // cover.setImageResource(recipe.cover)
-                title.text = recipe.name
-                time.text = recipe.time
-                necessaries.text = recipe.necessaries
-                description.text = recipe.description
-            }
-        }
-        return view
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initUi()
+
+        recipeID = args.recipeID
+
+        viewModel = ViewModelProviders.of(this).get(RecipeDetailViewModel::class.java)
+        viewModel.getRecipeFromRoom(recipeID)
+
+        observeLiveData()
     }
 
-    private fun initUi() {
-        val recipeID = args.recipeID
-        val recipe = recipeFromID(recipeID)
-        if (recipe != null) {
-            binding.apply {
-                //cover.setImageResource(recipe.cover)
-                title.text = recipe.name
-                time.text = recipe.time
-                necessaries.text = recipe.necessaries
-                description.text = recipe.description
+    private fun observeLiveData() {
+        viewModel.recipeLiveData.observe(viewLifecycleOwner) { recipe ->
+            recipe?.let {
+                binding.title.text = recipe.name
+                binding.time.text = recipe.time
+                binding.necessaries.text = recipe.necessaries
+                binding.description.text = recipe.description
+                context?.let {
+                    binding.cover.downloadImage(recipe.recipeImage, placeHolder(requireContext()))
+                }
             }
         }
     }
@@ -60,14 +57,6 @@ class RecipeDetailFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun recipeFromID(recipeID: Int): Recipe? {
-        for (recipe in recipeList) {
-            if (recipe.uuid == recipeID)
-                return recipe
-        }
-        return null
     }
 
 }

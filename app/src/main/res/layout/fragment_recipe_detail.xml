@@ -3,65 +3,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/primary_light"
+    android:orientation="vertical"
     tools:context=".presentation.ui.fragment.recipe_detail.RecipeDetailFragment">
 
-    <ImageView
-        android:id="@+id/cover"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/cover"
-        android:scaleType = "fitXY"
-        android:src="@drawable/patlican_pizza" />
-
-    <TextView
-        android:id="@+id/title"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:lines="2"
-        android:text="@string/title_place_holder"
-        android:textColor="@color/night_primary"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:lines="1"
-        android:text="@string/time_place_holder"
-        android:textColor="@color/night_primary_dark"
-        android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/necessaries"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="@string/necessaries"
-        android:textColor="@color/night_primary_dark"
-        android:textSize="14sp" />
+            <ImageView
+                android:id="@+id/cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/cover"
+                android:scaleType="fitXY"
+                android:src="@drawable/patlican_pizza" />
 
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="@string/description"
-        android:textColor="@color/night_primary_dark"
-        android:textSize="14sp" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:lines="2"
+                android:text="@string/title_place_holder"
+                android:textColor="@color/night_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/time_place_holder"
+                android:textColor="@color/night_primary_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/titleNecessaries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:lines="1"
+                android:text="@string/titleNecessaries"
+                android:textColor="@color/night_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/necessaries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/necessaries"
+                android:textColor="@color/night_primary_dark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/titleDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:lines="1"
+                android:text="@string/titleDescription"
+                android:textColor="@color/night_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/description"
+                android:textColor="@color/night_primary_dark"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

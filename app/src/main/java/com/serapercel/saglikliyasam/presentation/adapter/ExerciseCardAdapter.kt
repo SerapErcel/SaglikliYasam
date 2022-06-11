@@ -9,9 +9,11 @@ import com.serapercel.saglikliyasam.model.Exercise
 import com.serapercel.saglikliyasam.util.listener.ExerciseClickListener
 
 class ExerciseCardAdapter(
+
     private val exercises: List<Exercise>,
     private val clickListener: ExerciseClickListener,
     private val context: Context
+
 ) : RecyclerView.Adapter<ExerciseCardViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseCardViewHolder {
