@@ -4,12 +4,11 @@ import android.content.Context
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
-import androidx.work.PeriodicWorkRequestBuilder
-import androidx.work.WorkManager
-import androidx.work.workDataOf
+import androidx.work.*
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.serapercel.saglikliyasam.R
+import java.util.*
 import java.util.concurrent.TimeUnit
 
 fun Context.toastShort(message: String) {
@@ -33,7 +32,7 @@ fun placeHolder(context: Context): CircularProgressDrawable {
     }
 }
 
-fun createWorkRequest(message: String, timeDelay: Long, context: Context) {
+fun createMinuteWorkRequest(message: String, timeDelay: Long, context: Context) {
     val myWorkRequest = PeriodicWorkRequestBuilder<ReminderWorker>(timeDelay, TimeUnit.MINUTES)
         .setInputData(
             workDataOf(
@@ -44,5 +43,27 @@ fun createWorkRequest(message: String, timeDelay: Long, context: Context) {
         .build()
 
     WorkManager.getInstance(context).enqueue(myWorkRequest)
+}
 
+fun createDailyWorkRequest(hourOfDay: Int, minute: Int, message: String, context: Context) {
+    val target = Calendar.getInstance().apply {
+        set(Calendar.HOUR_OF_DAY, hourOfDay)
+        set(Calendar.MINUTE, minute)
+    }
+
+    val notificationRequest = PeriodicWorkRequestBuilder<ReminderWorker>(24, TimeUnit.HOURS)
+        .setInputData(
+            workDataOf(
+                "title" to "Sağlıklı Yaşam",
+                "message" to message,
+            )
+        )
+        .setInitialDelay(target.timeInMillis - System.currentTimeMillis(), TimeUnit.MILLISECONDS)
+        .build()
+    WorkManager.getInstance(context)
+        .enqueueUniquePeriodicWork(
+            "reminder_notification_work",
+            ExistingPeriodicWorkPolicy.REPLACE,
+            notificationRequest
+        )
 }

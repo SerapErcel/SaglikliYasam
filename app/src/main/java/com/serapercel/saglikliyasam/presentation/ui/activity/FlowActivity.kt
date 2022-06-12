@@ -12,8 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.ActivityFlowBinding
-import com.serapercel.saglikliyasam.util.createWorkRequest
-
+import com.serapercel.saglikliyasam.util.createMinuteWorkRequest
 class FlowActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFlowBinding
@@ -35,8 +34,8 @@ class FlowActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        createWorkRequest("Dik Dur!", 45, this)
-        createWorkRequest("Su iç!", 60, this)
+        createMinuteWorkRequest("Dik Dur!", 45, this)
+        createMinuteWorkRequest("Su iç!", 60, this)
 
     }
 

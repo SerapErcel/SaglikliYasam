@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.serapercel.saglikliyasam.util.listener.RecipeClickListener
-import com.serapercel.saglikliyasam.databinding.CardCellBinding
+import com.serapercel.saglikliyasam.databinding.RecipeCardCellBinding
 import com.serapercel.saglikliyasam.model.Recipe
 import com.serapercel.saglikliyasam.util.downloadImage
 import com.serapercel.saglikliyasam.util.placeHolder
@@ -16,12 +16,12 @@ class RecipeCardAdapter(
     private val context: Context
 ) : RecyclerView.Adapter<RecipeCardAdapter.CardViewHolder>() {
 
-    class CardViewHolder(val itemBinding: CardCellBinding) :
+    class CardViewHolder(val itemBinding: RecipeCardCellBinding) :
         RecyclerView.ViewHolder(itemBinding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
         val binding =
-            CardCellBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            RecipeCardCellBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CardViewHolder(binding)
     }
 
