@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam.presentation.ui.fragment.medicineAdd
+package com.serapercel.saglikliyasam.presentation.ui.fragment.medicine_add
 
 import androidx.lifecycle.ViewModel
 

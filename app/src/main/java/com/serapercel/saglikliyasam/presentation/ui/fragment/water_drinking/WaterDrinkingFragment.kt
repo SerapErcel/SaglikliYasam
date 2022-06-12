@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam.presentation.ui.fragment.waterDrinking
+package com.serapercel.saglikliyasam.presentation.ui.fragment.water_drinking
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

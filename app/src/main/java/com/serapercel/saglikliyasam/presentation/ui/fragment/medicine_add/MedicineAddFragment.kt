@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam.presentation.ui.fragment.medicineAdd
+package com.serapercel.saglikliyasam.presentation.ui.fragment.medicine_add
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,7 +14,7 @@ class MedicineAddFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_medicine_add, container, false)
+        return inflater.inflate(R.layout.fragment_add_medicine, container, false)
     }
 
 }
