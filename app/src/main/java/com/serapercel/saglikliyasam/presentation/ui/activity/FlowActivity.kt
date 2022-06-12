@@ -12,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.ActivityFlowBinding
+import com.serapercel.saglikliyasam.util.createWorkRequest
 
 class FlowActivity : AppCompatActivity() {
 
@@ -34,11 +35,13 @@ class FlowActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
+        createWorkRequest("Dik Dur!", 45, this)
+        createWorkRequest("Su iç!", 60, this)
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.fragmentContainer)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
-
 }
