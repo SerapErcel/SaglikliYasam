@@ -20,8 +20,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp"
-            tools:context=".MainActivity">
+            android:padding="10dp">
 
             <EditText
                 android:id="@+id/editTextMeal"
@@ -39,8 +38,8 @@
                 android:paddingVertical="10dp"
                 android:textColor="@color/night_primary_dark"
                 android:textColorHint="@color/primary_dark"
-                app:layout_constraintBottom_toTopOf="@+id/datePicker"
 
+                app:layout_constraintBottom_toTopOf="@+id/datePicker"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
