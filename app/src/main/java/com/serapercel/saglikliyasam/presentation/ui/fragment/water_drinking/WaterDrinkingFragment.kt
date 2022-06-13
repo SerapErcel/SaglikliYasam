@@ -33,17 +33,17 @@ class WaterDrinkingFragment : Fragment() {
 
         binding.positiveFab.setOnClickListener {
             waterNum++
-            sharedPreferences.addWater(waterNum)
+            sharedPreferences.addWater(water = waterNum)
             setGlassImage()
-            binding.amount.text = sharedPreferences.getWater().toString()
+            sharedPreferences.getWater().toString().also { binding.amount.text = it }
 
         }
         binding.negativeFab.setOnClickListener {
             if (waterNum > 0) {
                 waterNum--
-                sharedPreferences.addWater(waterNum)
+                sharedPreferences.addWater(water = waterNum)
                 setGlassImage()
-                binding.amount.text = sharedPreferences.getWater().toString()
+                sharedPreferences.getWater().toString().also { binding.amount.text = it }
             }
         }
     }
@@ -53,7 +53,6 @@ class WaterDrinkingFragment : Fragment() {
         1 -> binding.glass.setImageResource(R.drawable.glass2)
         2 -> binding.glass.setImageResource(R.drawable.glass3)
         3 -> binding.glass.setImageResource(R.drawable.glass4)
-        4 -> binding.glass.setImageResource(R.drawable.glass5)
         else -> {
             binding.glass.setImageResource(R.drawable.glass5)
         }
