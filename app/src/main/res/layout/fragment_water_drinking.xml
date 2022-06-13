@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.fragment.water_drinking.WaterDrinkingFragment"
-    android:background="@color/primary_light">
+    android:background="@color/primary_light"
+    tools:context=".presentation.ui.fragment.water_drinking.WaterDrinkingFragment">
 
 
     <ImageView
@@ -26,8 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@string/water"
+        android:scaleType="fitXY"
         android:src="@drawable/water"
-        android:scaleType = "fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -44,10 +43,10 @@
         android:contentDescription="@string/button"
         android:focusable="true"
         android:src="@drawable/positive"
-        app:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/glass"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="18dp"
+        app:tint="@color/white"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -61,11 +60,11 @@
         android:contentDescription="@string/button"
         android:focusable="true"
         android:src="@drawable/negative"
-        app:tint="@color/white"
-        app:maxImageSize="18dp"
         app:layout_constraintBottom_toBottomOf="@+id/glass"
         app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="@color/night_primary_light" />
+        app:maxImageSize="18dp"
+        app:rippleColor="@color/night_primary_light"
+        app:tint="@color/white" />
 
     <TextView
         android:id="@+id/WaterTitleTextView"
@@ -94,4 +93,19 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/WaterTitleTextView" />
+
+    <TextView
+        android:id="@+id/glassTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/glass_title"
+        android:textAlignment="center"
+        android:textColor="@color/night_primary_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/positiveFab"
+        app:layout_constraintStart_toEndOf="@+id/negativeFab"
+        app:layout_constraintTop_toBottomOf="@+id/amount" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
