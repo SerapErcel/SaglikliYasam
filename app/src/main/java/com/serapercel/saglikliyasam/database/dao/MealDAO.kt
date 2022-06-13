@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam.database
+package com.serapercel.saglikliyasam.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert

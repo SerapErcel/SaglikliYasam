@@ -1,13 +1,13 @@
-package com.serapercel.saglikliyasam.presentation.adapter
+package com.serapercel.saglikliyasam.presentation.adapter.recipeAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.serapercel.saglikliyasam.util.listener.RecipeClickListener
 import com.serapercel.saglikliyasam.databinding.RecipeCardCellBinding
 import com.serapercel.saglikliyasam.model.Recipe
 import com.serapercel.saglikliyasam.util.downloadImage
+import com.serapercel.saglikliyasam.util.listener.RecipeClickListener
 import com.serapercel.saglikliyasam.util.placeHolder
 
 class RecipeCardAdapter(

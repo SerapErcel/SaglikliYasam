@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.serapercel.saglikliyasam.databinding.FragmentRecipesBinding
 import com.serapercel.saglikliyasam.model.Recipe
-import com.serapercel.saglikliyasam.presentation.adapter.RecipeCardAdapter
+import com.serapercel.saglikliyasam.presentation.adapter.recipeAdapter.RecipeCardAdapter
 import com.serapercel.saglikliyasam.util.listener.RecipeClickListener
 
 class RecipesFragment : Fragment(), RecipeClickListener {

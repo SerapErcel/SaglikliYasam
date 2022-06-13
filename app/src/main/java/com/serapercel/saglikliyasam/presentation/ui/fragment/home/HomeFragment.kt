@@ -1,10 +1,10 @@
 package com.serapercel.saglikliyasam.presentation.ui.fragment.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -13,8 +13,8 @@ import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.FragmentHomeBinding
 import com.serapercel.saglikliyasam.model.Exercise
 import com.serapercel.saglikliyasam.model.Recipe
-import com.serapercel.saglikliyasam.presentation.adapter.HomeExerciseCellAdapter
-import com.serapercel.saglikliyasam.presentation.adapter.HomeRecipeCellAdapter
+import com.serapercel.saglikliyasam.presentation.adapter.homeAdapters.homeExecriseAdapter.HomeExerciseCellAdapter
+import com.serapercel.saglikliyasam.presentation.adapter.homeAdapters.homeRecipeAdapter.HomeRecipeCellAdapter
 import com.serapercel.saglikliyasam.util.listener.ExerciseClickListener
 import com.serapercel.saglikliyasam.util.listener.RecipeClickListener
 

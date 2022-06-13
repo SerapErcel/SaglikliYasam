@@ -1,16 +1,16 @@
 package com.serapercel.saglikliyasam.presentation.ui.fragment.exercises
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.serapercel.saglikliyasam.databinding.FragmentExercisesBinding
 import com.serapercel.saglikliyasam.model.Exercise
-import com.serapercel.saglikliyasam.presentation.adapter.ExerciseCardAdapter
+import com.serapercel.saglikliyasam.presentation.adapter.exerciseCardAdapter.ExerciseCardAdapter
 import com.serapercel.saglikliyasam.util.listener.ExerciseClickListener
 
 class ExercisesFragment : Fragment(), ExerciseClickListener {

@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam.presentation.adapter
+package com.serapercel.saglikliyasam.presentation.adapter.medicineAdapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

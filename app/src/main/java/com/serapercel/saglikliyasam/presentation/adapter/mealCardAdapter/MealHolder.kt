@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam.presentation.adapter
+package com.serapercel.saglikliyasam.presentation.adapter.mealCardAdapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.serapercel.saglikliyasam.databinding.MealRecyclerRowBinding

@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam.presentation.adapter
+package com.serapercel.saglikliyasam.presentation.adapter.exerciseCardAdapter
 
 import android.content.Context
 import androidx.recyclerview.widget.RecyclerView

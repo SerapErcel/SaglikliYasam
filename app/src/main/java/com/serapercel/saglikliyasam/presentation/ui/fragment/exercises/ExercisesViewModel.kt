@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import com.serapercel.saglikliyasam.database.RDatabase
 import com.serapercel.saglikliyasam.database.SharedPreferences
 import com.serapercel.saglikliyasam.model.Exercise
-import com.serapercel.saglikliyasam.service.ExerciseAPIService
+import com.serapercel.saglikliyasam.service.exerciseService.ExerciseAPIService
 import com.serapercel.saglikliyasam.util.base.BaseViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable

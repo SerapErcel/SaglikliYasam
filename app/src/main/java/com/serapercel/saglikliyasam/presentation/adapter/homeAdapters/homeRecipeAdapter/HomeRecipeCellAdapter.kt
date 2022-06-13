@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam.presentation.adapter
+package com.serapercel.saglikliyasam.presentation.adapter.homeAdapters.homeRecipeAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
