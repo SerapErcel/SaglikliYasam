@@ -45,7 +45,12 @@ fun createMinuteWorkRequest(message: String, timeDelay: Long, context: Context) 
     WorkManager.getInstance(context).enqueue(myWorkRequest)
 }
 
-fun createDailyWorkRequest(hourOfDay: Int, minute: Int, message: String, context: Context) {
+fun createDailyWorkRequest(
+    hourOfDay: Int,
+    minute: Int,
+    message: String,
+    context: Context
+) {
     val target = Calendar.getInstance().apply {
         set(Calendar.HOUR_OF_DAY, hourOfDay)
         set(Calendar.MINUTE, minute)
@@ -58,12 +63,49 @@ fun createDailyWorkRequest(hourOfDay: Int, minute: Int, message: String, context
                 "message" to message,
             )
         )
-        .setInitialDelay(target.timeInMillis - System.currentTimeMillis(), TimeUnit.MILLISECONDS)
+        .setInitialDelay(
+            target.timeInMillis - System.currentTimeMillis(),
+            TimeUnit.MILLISECONDS
+        )
         .build()
     WorkManager.getInstance(context)
         .enqueueUniquePeriodicWork(
-            "reminder_notification_work",
+            "reminder_meal_notification_work",
             ExistingPeriodicWorkPolicy.REPLACE,
             notificationRequest
         )
 }
+
+fun createDailyMedicineWorkRequest(
+    hourOfDay: Int,
+    minute: Int,
+    message: String,
+    context: Context
+) {
+    val target = Calendar.getInstance().apply {
+        set(Calendar.HOUR_OF_DAY, hourOfDay)
+        set(Calendar.MINUTE, minute)
+    }
+
+    val notificationRequest = PeriodicWorkRequestBuilder<ReminderWorker>(24, TimeUnit.HOURS)
+        .setInputData(
+            workDataOf(
+                "title" to "Sağlıklı Yaşam",
+                "message" to message,
+            )
+        )
+        .setInitialDelay(
+            target.timeInMillis - System.currentTimeMillis(),
+            TimeUnit.MILLISECONDS
+        )
+        .build()
+    WorkManager.getInstance(context)
+        .enqueueUniquePeriodicWork(
+            "reminder_medicine_notification_work",
+            ExistingPeriodicWorkPolicy.REPLACE,
+            notificationRequest
+        )
+}
+
+
+

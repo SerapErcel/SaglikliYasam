@@ -39,22 +39,12 @@
                 android:textColor="@color/night_primary_dark"
                 android:textColorHint="@color/primary_dark"
 
-                app:layout_constraintBottom_toTopOf="@+id/datePicker"
+                app:layout_constraintBottom_toTopOf="@+id/timePicker"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="TextContrastCheck" />
 
-            <DatePicker
-                android:id="@+id/datePicker"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:calendarViewShown="false"
-                android:datePickerMode="spinner"
-                app:layout_constraintBottom_toTopOf="@+id/timePicker"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextMeal" />
 
             <TimePicker
                 android:id="@+id/timePicker"
@@ -64,7 +54,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/addButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextMeal" />
 
             <Button
                 android:id="@+id/addButton"
