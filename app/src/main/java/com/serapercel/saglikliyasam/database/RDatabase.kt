@@ -5,12 +5,14 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.serapercel.saglikliyasam.model.Exercise
+import com.serapercel.saglikliyasam.model.Medicine
 import com.serapercel.saglikliyasam.model.Recipe
 
-@Database(entities = [Recipe::class, Exercise::class], version = 1, exportSchema = false)
+@Database(entities = [Recipe::class, Exercise::class, Medicine::class], version = 1, exportSchema = false)
 abstract class RDatabase : RoomDatabase() {
     abstract fun recipeDao(): RecipeDAO
     abstract fun exerciseDao(): ExerciseDAO
+    abstract fun medicinesDao(): MedicineDAO
 
     // Singleton
     companion object {
