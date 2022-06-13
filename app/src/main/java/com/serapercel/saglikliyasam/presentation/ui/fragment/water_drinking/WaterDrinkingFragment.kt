@@ -6,55 +6,56 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.serapercel.saglikliyasam.R
+import com.serapercel.saglikliyasam.database.SharedPreferences
+import com.serapercel.saglikliyasam.databinding.FragmentWaterDrinkingBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [WaterDrinkingFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class WaterDrinkingFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentWaterDrinkingBinding? = null
+    private val binding get() = _binding!!
+
+    private val sharedPreferences = SharedPreferences()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_water_drinking, container, false)
+    ): View {
+        _binding = FragmentWaterDrinkingBinding.inflate(inflater, container, false)
+        setGlassImage()
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment WaterDrinkingFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            WaterDrinkingFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.amount.text = sharedPreferences.getWater().toString()
+        var waterNum = sharedPreferences.getWater()!!
+
+        binding.positiveFab.setOnClickListener {
+            waterNum++
+            sharedPreferences.addWater(waterNum)
+            setGlassImage()
+            binding.amount.text = sharedPreferences.getWater().toString()
+
+        }
+        binding.negativeFab.setOnClickListener {
+            if (waterNum > 0) {
+                waterNum--
+                sharedPreferences.addWater(waterNum)
+                setGlassImage()
+                binding.amount.text = sharedPreferences.getWater().toString()
             }
+        }
+    }
+
+    private fun setGlassImage() = when (sharedPreferences.getWater()) {
+        0 -> binding.glass.setImageResource(R.drawable.glass)
+        1 -> binding.glass.setImageResource(R.drawable.glass2)
+        2 -> binding.glass.setImageResource(R.drawable.glass3)
+        3 -> binding.glass.setImageResource(R.drawable.glass4)
+        4 -> binding.glass.setImageResource(R.drawable.glass5)
+        else -> {
+            binding.glass.setImageResource(R.drawable.glass5)
+        }
     }
 }
