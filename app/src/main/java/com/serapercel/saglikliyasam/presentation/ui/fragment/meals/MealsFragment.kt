@@ -1,18 +1,18 @@
 package com.serapercel.saglikliyasam.presentation.ui.fragment.meals
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.FragmentMealsBinding
 import com.serapercel.saglikliyasam.model.Meal
-import com.serapercel.saglikliyasam.presentation.adapter.MealAdapter
-import com.serapercel.saglikliyasam.presentation.adapter.MedicineAdapter
+import com.serapercel.saglikliyasam.presentation.adapter.mealCardAdapter.MealAdapter
+import com.serapercel.saglikliyasam.presentation.adapter.medicineAdapter.MedicineAdapter
 
 class MealsFragment : Fragment() {
 

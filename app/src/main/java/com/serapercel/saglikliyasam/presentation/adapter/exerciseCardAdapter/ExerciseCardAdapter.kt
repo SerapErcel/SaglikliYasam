@@ -1,26 +1,28 @@
-package com.serapercel.saglikliyasam.presentation.adapter
+package com.serapercel.saglikliyasam.presentation.adapter.exerciseCardAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.serapercel.saglikliyasam.databinding.HomeExerciseCellBinding
+import com.serapercel.saglikliyasam.databinding.ExerciseCardCellBinding
 import com.serapercel.saglikliyasam.model.Exercise
 import com.serapercel.saglikliyasam.util.listener.ExerciseClickListener
 
-class HomeExerciseCellAdapter(
+class ExerciseCardAdapter(
+
     private val exercises: List<Exercise>,
     private val clickListener: ExerciseClickListener,
     private val context: Context
-) : RecyclerView.Adapter<HomeExerciseCellHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeExerciseCellHolder {
+) : RecyclerView.Adapter<ExerciseCardViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseCardViewHolder {
         val from = LayoutInflater.from(parent.context)
-        val binding = HomeExerciseCellBinding.inflate(from, parent, false)
-        return HomeExerciseCellHolder(binding, clickListener, context)
+        val binding = ExerciseCardCellBinding.inflate(from, parent, false)
+        return ExerciseCardViewHolder(binding, clickListener, context)
     }
 
-    override fun onBindViewHolder(holder: HomeExerciseCellHolder, position: Int) {
+    override fun onBindViewHolder(holder: ExerciseCardViewHolder, position: Int) {
         holder.bindExercise(exercises[position])
     }
 
