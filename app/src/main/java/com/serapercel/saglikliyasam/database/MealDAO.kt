@@ -12,17 +12,17 @@ interface MealDAO {
     //Data Access Object
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertMedicine(vararg meal: Meal)
+    suspend fun insertMeal(vararg meal: Meal)
 
     @Insert
-    suspend fun insertAllMedicine(vararg meals: Meal): List<Long>
+    suspend fun insertAllMeal(vararg meals: Meal): List<Long>
 
     @Query("SELECT * FROM Meals")
-    suspend fun getAllMedicine(): List<Meal>
+    suspend fun getAllMeal(): List<Meal>
 
     @Query("SELECT * FROM Meals WHERE uuid = :mealID")
-    suspend fun getMedicine(mealID: Int): Meal
+    suspend fun getMeal(mealID: Int): Meal
 
     @Query("DELETE FROM Meals")
-    suspend fun deleteAllMedicine()
+    suspend fun deleteMeal()
 }
