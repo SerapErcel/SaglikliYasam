@@ -58,5 +58,6 @@
     <string name="error">Hata, Tekrar Deneyiniz!</string>
     <string name="titleNecessaries">Malzemeler</string>
     <string name="titleDescription">Yapılışı</string>
+    <string name="glass_title">Bardak</string>
 
 </resources>

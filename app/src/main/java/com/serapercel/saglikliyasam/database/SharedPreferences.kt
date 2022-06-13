@@ -3,12 +3,12 @@ package com.serapercel.saglikliyasam.database
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
-
 class SharedPreferences {
 
     companion object {
         private const val TimeRecipe = "timeRecipe"
         private const val TimeExercise = "timeExercise"
+        const val Water = "water"
 
         private var sharedPreferences: SharedPreferences? = null
 
@@ -40,6 +40,7 @@ class SharedPreferences {
     }
 
     fun getTimeRecipe() = sharedPreferences?.getLong(TimeRecipe, 0)
+
     fun saveTimeExercise(time: Long) {
         sharedPreferences?.edit(commit = true) {
             putLong(TimeExercise, time)
@@ -47,4 +48,13 @@ class SharedPreferences {
     }
 
     fun getTimeExercise() = sharedPreferences?.getLong(TimeExercise, 0)
+
+    fun addWater(water: Int) {
+        sharedPreferences?.edit(commit = true) {
+            putInt(Water, water)
+        }
+    }
+
+    fun getWater() = sharedPreferences?.getInt(Water, 0)
+
 }
