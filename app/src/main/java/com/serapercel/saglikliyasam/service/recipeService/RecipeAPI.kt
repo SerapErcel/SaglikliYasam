@@ -1,4 +1,4 @@
-package com.serapercel.saglikliyasam.service
+package com.serapercel.saglikliyasam.service.recipeService
 
 import com.serapercel.saglikliyasam.model.Recipe
 import io.reactivex.Single
