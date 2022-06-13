@@ -90,7 +90,11 @@
         android:id="@+id/medicineAddFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.medicine_add.MedicineAddFragment"
         android:label="İlaç Ekle"
-        tools:layout="@layout/fragment_add_medicine" />
+        tools:layout="@layout/fragment_add_medicine" >
+        <action
+            android:id="@+id/action_medicineAddFragment_to_medicinesFragment"
+            app:destination="@id/medicinesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mealsFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.meals.MealsFragment"
@@ -104,7 +108,11 @@
         android:id="@+id/addMealFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.meal_add.AddMealFragment"
         android:label="Öğün Ekle"
-        tools:layout="@layout/fragment_add_meal" />
+        tools:layout="@layout/fragment_add_meal" >
+        <action
+            android:id="@+id/action_addMealFragment_to_mealsFragment"
+            app:destination="@id/mealsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/waterDrinkingFragment"
         android:name="com.serapercel.saglikliyasam.presentation.ui.fragment.water_drinking.WaterDrinkingFragment"

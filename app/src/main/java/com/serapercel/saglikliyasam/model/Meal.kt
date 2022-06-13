@@ -1,9 +1,18 @@
 package com.serapercel.saglikliyasam.model
 
-var mealList = mutableListOf<Meal>()
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-class Meal(
+@Entity(tableName = "Meals")
+data class Meal(
+    @ColumnInfo(name = "mealName")
     var name: String,
+    @ColumnInfo(name = "mealTime")
     var time: String,
-    val id: Int? = mealList.size
-)
+) {
+
+    @PrimaryKey(autoGenerate = true)
+    var uuid: Int = 0
+
+}

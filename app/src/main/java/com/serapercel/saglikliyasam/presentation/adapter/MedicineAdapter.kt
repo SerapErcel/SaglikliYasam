@@ -4,23 +4,24 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.serapercel.saglikliyasam.databinding.MedicineRecyclerRowBinding
-import com.serapercel.saglikliyasam.model.medicineList
+import com.serapercel.saglikliyasam.model.Medicine
 
-class MedicineAdapter() :
+class MedicineAdapter(
+    private val medicines: List<Medicine>,
+) :
     RecyclerView.Adapter<MedicineHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedicineHolder {
+        val from = LayoutInflater.from(parent.context)
         val binding =
-            MedicineRecyclerRowBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            MedicineRecyclerRowBinding.inflate(from, parent, false)
         return MedicineHolder(binding)
     }
 
     override fun onBindViewHolder(holder: MedicineHolder, position: Int) {
-        holder.binding.medicineText.text = medicineList[position].name
-        holder.binding.timeText.text = medicineList[position].time
-
+        holder.bindMedicine(medicines[position])
     }
 
-    override fun getItemCount(): Int {
-        return medicineList.size
-    }
+    override fun getItemCount(): Int = medicines.size
+
 }
