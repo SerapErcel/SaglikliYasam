@@ -10,9 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.serapercel.saglikliyasam.R
 import com.serapercel.saglikliyasam.databinding.FragmentMealsBinding
 import com.serapercel.saglikliyasam.model.Meal
-import com.serapercel.saglikliyasam.model.Medicine
 import com.serapercel.saglikliyasam.model.mealList
-import com.serapercel.saglikliyasam.model.medicineList
 import com.serapercel.saglikliyasam.presentation.adapter.MealAdapter
 
 class MealsFragment : Fragment() {
